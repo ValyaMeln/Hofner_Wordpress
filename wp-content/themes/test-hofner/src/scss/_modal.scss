@@ -1,0 +1,145 @@
+.header__menu_popup_content {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 11;
+}
+
+.header__menu_popup_close {
+    text-decoration-line: none;
+}
+
+.header__menu_popup_list {
+    background: #000000;
+}
+
+.header__menu_popup_item {
+    height: 100%;
+    flex: 1 0 25%;
+    text-align: center;
+    border-right: 1px solid #31353E;
+}
+
+.header__menu_popup_item .header__select_btn_language,
+.header__menu_popup_item .header__select_btn_currency {
+    padding: 20px 28px 20px 10px;
+}
+
+.header__menu_popup_item:nth-child(3) {
+    padding-top: 17px;
+    padding-bottom: 17px;
+    font-size: 28px;
+
+}
+
+.header__menu_popup_item:nth-child(4) {
+    padding-top: 17px;
+    padding-bottom: 17px;
+    font-size: 24px;
+}
+
+.header__menu_popup_item:last-child {
+    border-right: none;
+}
+
+/*==========================================*/
+.header__menu_popup_tablet,
+.header__menu_popup_tablet_link_info {
+    padding: 30px 70px;
+    background: #1B1B1F;
+}
+
+.header__menu_popup_tablet_link_wrapper {
+    position: relative;
+    margin-bottom: 30px;
+    text-align: left;
+    cursor: pointer;
+}
+
+.header__menu_popup_tablet_link_wrapper:last-child {
+    margin-bottom: 0;
+}
+
+.header__menu_popup_tablet_link:hover {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.header__menu_popup_tablet_link_wrapper::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    right: 0;
+    margin: auto;
+    height: 5px;
+    width: 8px;
+    background: transparent url(../images/headerMenu/select.svg) 0 0/100% no-repeat;
+}
+
+.header__menu_popup_tablet_link:hover {
+    color: #1B1B1F;
+    background-color: #FFFFFF;
+}
+
+.header__dropdown_list {
+    margin-top: 20px;
+}
+
+.header__menu_popup_tablet_link_info {
+    padding-top: 30px;
+    border-top: 1px solid #31353E;;
+}
+
+/*======================================*/
+.modal__ourAdvantages__btn_read_more {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 2;
+}
+
+.modal__ourAdvantages_content {
+    position: fixed;
+    padding: 45px 45px 25px;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 50%;
+    bottom: 50%;
+    max-width: 895px;
+    min-height: 520px;
+    background: #FFFFFF;
+    box-shadow: 0 0 20px rgba(5, 7, 28, 0.18);
+    z-index: 2;
+}
+
+.modal__close {
+    position: absolute;
+    top: 40px;
+    right: 45px;
+}
+
+.modal-content-show {
+    display: block;
+    animation: fade .6s;
+}
+
+
+
+
+
+
+
+
+
+
+
+

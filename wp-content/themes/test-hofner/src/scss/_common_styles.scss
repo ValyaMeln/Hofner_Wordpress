@@ -1,0 +1,150 @@
+h2 {
+  margin-bottom: 0;
+  font-weight: 600;
+  font-size: 42px;
+  line-height: 48px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+h3 {
+  margin-bottom: 0;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 26px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+h4 {
+  margin-bottom: 0;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 26px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+h5 {
+  margin-bottom: 0;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 26px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.paragraph1 {
+  font-family: Roboto, sans-serif;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 35px;
+  color: #010306;
+}
+
+.paragraph2 {
+  font-family: Roboto, sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.paragraph3 {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.paddingTB {
+  padding: 100px 0;
+}
+
+.goTo {
+  padding: 17px 80px;
+  font-family: 'Alumni Sans', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #000000;
+  background: #FCB500;
+  border: none;
+  &:hover {
+    background: #FFC635;
+  }
+}
+
+
+
+.newDevelopments__btn {
+  width: 50%;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  transition-timing-function: linear;
+  text-decoration: none !important;
+  font-family: Alumni Sans, sans-serif;
+  text-align: center;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: .02em;
+  text-transform: uppercase;
+  justify-content: center;
+  padding: 12px 20px;
+  border: none;
+}
+
+.btn-orange {
+  border-radius: 0 0 0 4px;
+  color: #000000;
+  background: #FCB500;
+  &:hover {
+    background: #FFC635;
+  }
+}
+
+._icon-copy1:after {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  top: 0;
+  right: 0;
+}
+
+.btn-black {
+  border-radius: 0 0 4px 0;
+  color: #FFFFFF;
+  background: #000000;
+  &:hover {
+    background-color: #1B1B1F;
+  }
+}
+
+.ourProducts__product_column .has_no_padding,
+.ourAdvantages__product_column .has_no_padding {
+  padding: 0;
+}
+
+.btn_read_more {
+  font-family: Alumni Sans, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 26px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  text-decoration-line: underline;
+  color: #FCB500;
+  background-color: transparent;
+  border: none;
+  &:hover {
+    text-decoration-line: none;
+    color: #FCB500;
+  }
+}
+

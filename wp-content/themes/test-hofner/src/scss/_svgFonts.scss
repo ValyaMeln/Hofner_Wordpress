@@ -1,0 +1,162 @@
+@font-face {
+  font-family: 'svg_fonts';
+  src:
+    url('../fonts/svg_fonts.ttf?wrxtep') format('truetype');
+    /*url('../svgFonts/svg_fonts.woff?wrxtep') format('woff'),*/
+    /*url('../svgFonts/svg_fonts.svg?wrxtep#svg_fonts') format('svg');*/
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="_icon-"]::before,
+[class*=" _icon-"]::before,
+[class^="_icon-"]::after,
+[class*=" _icon-"]::after {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'svg_fonts' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+._icon-plus:before {
+  content: "\e91d";
+}
+._icon-plus1:before {
+  content: "\e91d";
+    font-size: 5px;
+}
+._icon-copy:before {
+  content: "\e911";
+}
+._icon-noun_Share:before {
+  content: "\e912";
+}
+._icon-Viber .path1:before {
+  content: "\e913";
+  color: white;
+}
+._icon-Viber .path2:before {
+  content: "\e914";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+._icon-Viber .path3:before {
+  content: "\e915";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+._icon-Viber .path4:before {
+  content: "\e916";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+._icon-Viber .path5:before {
+  content: "\e917";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+._icon-Telegram .path1:before {
+  content: "\e918";
+  color: rgb(0, 0, 0);
+}
+._icon-Telegram .path2:before {
+  content: "\e919";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+._icon-Facebook-1 .path1:before {
+  content: "\e91a";
+  color: rgb(0, 0, 0);
+}
+._icon-Facebook-1 .path2:before {
+  content: "\e91b";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+._icon-Vector-1:before {
+  content: "\e91c";
+}
+._icon-frame-social:before {
+  content: "\e900";
+  vertical-align: middle;
+}
+._icon-mastercard:before {
+  content: "\e901";
+}
+._icon-wss:before {
+  content: "\e902";
+  font-size: 23px;
+}
+._icon-visa:before {
+  content: "\e903";
+}
+._icon-burger-menu:before {
+  content: "\e904";
+}
+._icon-close:before {
+  content: "\e905";
+  vertical-align: middle;
+}
+._icon-basket:before {
+  content: "\e906";
+}
+._icon-basket2:after {
+  content: "\e906";
+}
+._icon-oval-orange:after {
+  content: "\e907";
+  position: absolute;
+  top: -13px;
+  right: -14px;
+  color: #FCB500;
+  font-size: 24px;
+}
+
+._icon-white-frame-heart:before {
+  content: "\e908";
+}
+._icon-white-frame-heart1:after {
+    content: "\e908";
+}
+._icon-icon-user:before {
+  content: "\e909";
+}
+._icon-search:before {
+  content: "\e90a";
+  vertical-align: middle;
+}
+._icon-youtube2:before {
+  content: "\e90b";
+}
+._icon-instagram2:before {
+  content: "\e90c";
+}
+._icon-facebook2:before {
+  content: "\e90d";
+}
+._icon-facebook:before {
+  content: "\e90e";
+  vertical-align:middle
+}
+._icon-instagram:before {
+  content: "\e90f";
+  vertical-align: middle;
+}
+._icon-youtube:before {
+  content: "\e910";
+  vertical-align: middle;
+}
+._icon-Vector-3:after {
+  content: "\e91e";
+  font-size: 13px;
+  margin-left: 5px;
+}
