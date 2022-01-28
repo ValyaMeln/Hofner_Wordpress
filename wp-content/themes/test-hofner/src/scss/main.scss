@@ -3,6 +3,7 @@
 @import "fonts";
 @import "common_styles";
 @import "svgFonts";
+@import "slider_products";
 
 //*{
 //  color: red;
@@ -196,20 +197,13 @@ img {
 
   &_item {
     padding: 7px 15px;
+    display: flex;
 
     &:hover {
       background: #3A3A42;
     }
   }
 }
-
-//.list_languages_item {
-//  padding: 7px 15px;
-//}
-
-//.list_languages_item:hover {
-//  background: #3A3A42;
-//}
 
 .number_like,
 .number_elections {
