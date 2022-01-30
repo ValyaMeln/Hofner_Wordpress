@@ -2,9 +2,12 @@
 <html <?php language_attributes(); ?>>
 <head>
     <meta charset="UTF-8">
-<!--    <link rel="apple-touch-icon" sizes="152x152" href="--><?php //bloginfo('template_url'); ?><!--/app/img/favicon-h.png">-->
-<!--    <link rel="icon" type="image/png" sizes="32x32" href="--><?php //bloginfo('template_url'); ?><!--/app/img/favicon-h.png">-->
-<!--    <link rel="icon" type="image/png" sizes="16x16" href="--><?php //bloginfo('template_url'); ?><!--/app/img/favicon-h.png">-->
+    <!--    <link rel="apple-touch-icon" sizes="152x152" href="-->
+    <?php //bloginfo('template_url'); ?><!--/app/img/favicon-h.png">-->
+    <!--    <link rel="icon" type="image/png" sizes="32x32" href="-->
+    <?php //bloginfo('template_url'); ?><!--/app/img/favicon-h.png">-->
+    <!--    <link rel="icon" type="image/png" sizes="16x16" href="-->
+    <?php //bloginfo('template_url'); ?><!--/app/img/favicon-h.png">-->
     <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Hofner</title>
@@ -12,13 +15,13 @@
 
     <?php wp_head(); ?>
 
-<!--    <link rel="preconnect" href="https://fonts.googleapis.com">-->
-<!--    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>-->
-<!--    <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans:wght@400;500;600;700&display=swap"-->
-<!--          rel="stylesheet">-->
-<!--    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">-->
-<!---->
-<!--    <link rel="stylesheet" href="css/main.min.css">-->
+    <!--    <link rel="preconnect" href="https://fonts.googleapis.com">-->
+    <!--    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>-->
+    <!--    <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans:wght@400;500;600;700&display=swap"-->
+    <!--          rel="stylesheet">-->
+    <!--    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">-->
+    <!---->
+    <!--    <link rel="stylesheet" href="css/main.min.css">-->
 </head>
 <body>
 
@@ -76,74 +79,81 @@
                 </a>
             </div>
 
-            <!--            <nav class=" d-flex align-items-center">-->
-            <ul class="header__menu_body header__menu_font">
-                <li class="header__menu_link_wrapper">
-                    <a href="#" class="header__menu_link">Одяг</a>
-                </li>
-                <li class="header__menu_link_wrapper">
-                    <a href="#" class="header__menu_link">Медицина</a>
-                </li>
-                <li class="header__menu_link_wrapper">
-                    <div>
-                        <a href="#" class="header__menu_link">Підсумки</a>
-                    </div>
-                    <div class="header__dropdown_menu row">
-                        <div class=" col-lg-12 col-xl-6">
-                            <ul class=" header__dropdown_menu_list paragraph2">
-                                <li class="header__dropdown-menu-item">
-                                    Підсумки для магазинів
-                                    <ul class="header__dropdown-menu_results_shops">
-                                        <li class="header__dropdown-menu_results_shops_item">Для пістолетних
-                                            магазинів
-                                        </li>
-                                        <li class="header__dropdown-menu_results_shops_item">Для автоматних
-                                            магазинів
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="header__dropdown-menu-item">
-                                    Для гранат
-                                </li>
-                                <li class="header__dropdown-menu-item">
-                                    Для рацій
-                                </li>
-                                <li class="header__dropdown-menu-item">
-                                    Універсальні
-                                </li>
+            <!--                        <nav class=" ">-->
 
-                            </ul>
-                        </div>
-                        <div class="col-lg-12 col-xl-6">
-                            <ul class="paragraph2">
-                                <li class="header__dropdown-menu-item">
-                                    Утилітарні
-                                </li>
-                                <li class="header__dropdown-menu-item">
-                                    Пістолетні кобури
-                                </li>
-                                <li class="header__dropdown-menu-item">
-                                    Чохол короба ПКМ
-                                </li>
-                                <li class="header__dropdown-menu-item">
-                                    Для гідросистеми
-                                </li>
-                                <li class="header__dropdown-menu-item">
-                                    Сумка-сухарка
-                                </li>
-                                <li class="header__dropdown-menu-item">
-                                    Сумка для скиду магазинів
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </li>
-                <li class="header__menu_link_wrapper">
-                    <a href="#" class="header__menu_link">Рюкзаки</a></li>
-                <li class="header__menu_link_wrapper">
-                    <a href="#" class="header__menu_link">Розгрузки</a></li>
-            </ul>
-            <!--            </nav>-->
+
+            <?php wp_nav_menu(array(
+                'theme_location' => 'top',
+                'container' => null,
+                'menu_class' => 'header__menu_font header__menu_body'
+            )); ?>
+<!--                        <ul class="header__menu_body header__menu_font">-->
+<!--                            <li class="header__menu_link_wrapper">-->
+<!--                                <a href="#" class="header__menu_link">Одяг</a>-->
+<!--                            </li>-->
+<!--                            <li class="header__menu_link_wrapper">-->
+<!--                                <a href="#" class="header__menu_link">Медицина</a>-->
+<!--                            </li>-->
+<!--                            <li class="header__menu_link_wrapper">-->
+<!--                                <div>-->
+<!--                                    <a href="#" class="header__menu_link">Підсумки</a>-->
+<!--                                </div>-->
+<!--                                <div class="header__dropdown_menu row">-->
+<!--                                    <div class=" col-lg-12 col-xl-6">-->
+<!--                                        <ul class=" header__dropdown_menu_list paragraph2">-->
+<!--                                            <li class="header__dropdown-menu-item">-->
+<!--                                                Підсумки для магазинів-->
+<!--                                                <ul class="header__dropdown-menu_results_shops">-->
+<!--                                                    <li class="header__dropdown-menu_results_shops_item">Для пістолетних-->
+<!--                                                        магазинів-->
+<!--                                                    </li>-->
+<!--                                                    <li class="header__dropdown-menu_results_shops_item">Для автоматних-->
+<!--                                                        магазинів-->
+<!--                                                    </li>-->
+<!--                                                </ul>-->
+<!--                                            </li>-->
+<!--                                            <li class="header__dropdown-menu-item">-->
+<!--                                                Для гранат-->
+<!--                                            </li>-->
+<!--                                            <li class="header__dropdown-menu-item">-->
+<!--                                                Для рацій-->
+<!--                                            </li>-->
+<!--                                            <li class="header__dropdown-menu-item">-->
+<!--                                                Універсальні-->
+<!--                                            </li>-->
+<!---->
+<!--                                        </ul>-->
+<!--                                    </div>-->
+<!--                                    <div class="col-lg-12 col-xl-6">-->
+<!--                                        <ul class="paragraph2">-->
+<!--                                            <li class="header__dropdown-menu-item">-->
+<!--                                                Утилітарні-->
+<!--                                            </li>-->
+<!--                                            <li class="header__dropdown-menu-item">-->
+<!--                                                Пістолетні кобури-->
+<!--                                            </li>-->
+<!--                                            <li class="header__dropdown-menu-item">-->
+<!--                                                Чохол короба ПКМ-->
+<!--                                            </li>-->
+<!--                                            <li class="header__dropdown-menu-item">-->
+<!--                                                Для гідросистеми-->
+<!--                                            </li>-->
+<!--                                            <li class="header__dropdown-menu-item">-->
+<!--                                                Сумка-сухарка-->
+<!--                                            </li>-->
+<!--                                            <li class="header__dropdown-menu-item">-->
+<!--                                                Сумка для скиду магазинів-->
+<!--                                            </li>-->
+<!--                                        </ul>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </li>-->
+<!--                            <li class="header__menu_link_wrapper">-->
+<!--                                <a href="#" class="header__menu_link">Рюкзаки</a></li>-->
+<!--                            <li class="header__menu_link_wrapper">-->
+<!--                                <a href="#" class="header__menu_link">Розгрузки</a></li>-->
+<!--                        </ul>-->
+            <!--                        </nav>-->
             <ul class="header__menu_buttons d-flex align-items-center">
                 <li class="header__menu_button _icon-search">
                 </li>
