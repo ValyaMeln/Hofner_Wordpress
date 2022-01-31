@@ -136,6 +136,7 @@ Template Name: home
             </div>
         </div>
     </section>
+
     <section class="newDevelopments paddingTB">
         <div class="newDevelopments__container container">
             <div class="newDevelopments__navigation_goods_cards d-flex justify-content-between">
@@ -158,7 +159,6 @@ Template Name: home
             </div>
             <div id="carouselExampleControls2" class="carousel slide" data-iterval="false">
                 <div class="carousel-inner">
-
                     <?php
                     global $post;
 
@@ -170,13 +170,14 @@ Template Name: home
                         foreach ($myposts as $post) {
                             setup_postdata($post);
                             ?>
-                            <div class="carousel-item active">
+                            <div class="carousel-item ">
                                 <div class="newDevelopments__cards row">
                                     <div class="newDevelopments__column col-12 col-md-6 col-lg-4 col-xl-3">
                                         <div class="newDevelopments__card item">
                                             <div class="tags">
                                                 <svg class="">-->
-                                                    <use xlink:href="<?php bloginfo('template_url'); ?>/app/img/sprite.svg#tag-sale."></use>
+                                                    <use xlink:href="
+                                                <?php bloginfo('template_url'); ?>/app/img/sprite.svg#tag-sale."></use>
                                                 </svg>
                                             </div>
                                             <div class="newDevelopments__photo_goods">
@@ -187,11 +188,13 @@ Template Name: home
                                                     )
                                                 ); ?>
                                             </div>
-                                            <h4 class="newDevelopments__product_name"> <?php the_title(); ?> </h4>
-                                            <span class="newDevelopments__new_price"> <?php the_content(
-                                                    array(
-                                                        'class' => 'newDevelopments__new_price'
-                                                    )); ?> </span>
+                                            <h4 class="newDevelopments__product_name">
+                                                <?php the_title(); ?> </h4>
+                                            <span class="newDevelopments__new_price">
+                    <?php the_content(
+                        array(
+                            'class' => 'newDevelopments__new_price'
+                        )); ?> </span>
                                             <span class="newDevelopments__old_price">4 168,00 ₴</span>
                                         </div>
                                         <div class="newDevelopments__btn-block d-flex align-items-center justify-content-center">
@@ -210,12 +213,14 @@ Template Name: home
 
                                             <div class="tags">
                                                 <svg class="">-->
-                                                    <use xlink:href="<?php bloginfo('template_url'); ?>/app/img/sprite.svg#tag-sale."></use>
+                                                    <use xlink:href="
+                    <?php bloginfo('template_url'); ?>/app/img/sprite.svg#tag-sale."></use>
                                                 </svg>
                                             </div>
                                             <div class="newDevelopments__photo_goods">
                                                 <img class="newDevelopments__photo_vest"
-                                                     src="<?php bloginfo('template_url'); ?>/app/img/newDevelopments/chekhol-bronezhileta.png"
+                                                     src="
+                    <?php bloginfo('template_url'); ?>/app/img/newDevelopments/chekhol-bronezhileta.png"
                                                      alt="tactical Equipment">
                                             </div>
                                             <h4 class="newDevelopments__product_name">БОЙОВА СОРОЧКА CS PIXEL ММ14</h4>
@@ -237,12 +242,14 @@ Template Name: home
                                         <div class="newDevelopments__card item">
                                             <div class="tags">
                                                 <svg class="">-->
-                                                    <use xlink:href="<?php bloginfo('template_url'); ?>/app/img/sprite.svg#tag-sale."></use>
+                                                    <use xlink:href="
+                    <?php bloginfo('template_url'); ?>/app/img/sprite.svg#tag-sale."></use>
                                                 </svg>
                                             </div>
                                             <div class="newDevelopments__photo_goods">
                                                 <img class="newDevelopments__photo_vest"
-                                                     src="<?php bloginfo('template_url'); ?>/app/img/newDevelopments/multicam.png"
+                                                     src="
+                    <?php bloginfo('template_url'); ?>/app/img/newDevelopments/multicam.png"
                                                      alt="tactical Equipment">
                                             </div>
                                             <h4 class="newDevelopments__product_name">БОЙОВА СОРОЧКА CS PIXEL ММ14</h4>
@@ -264,12 +271,14 @@ Template Name: home
                                         <div class="newDevelopments__card item">
                                             <div class="tags">
                                                 <svg class="">
-                                                    <use xlink:href="<?php bloginfo('template_url'); ?>/app/img/sprite.svg#tag-sale."></use>
+                                                    <use xlink:href="
+                    <?php bloginfo('template_url'); ?>/app/img/sprite.svg#tag-sale."></use>
                                                 </svg>
                                             </div>
                                             <div class="newDevelopments__photo_goods">
                                                 <img class="newDevelopments__photo_vest"
-                                                     src="<?php bloginfo('template_url'); ?>/app/img/newDevelopments/FRAME_PIDSUMOK.png"
+                                                     src="
+                    <?php bloginfo('template_url'); ?>/app/img/newDevelopments/FRAME_PIDSUMOK.png"
                                                      alt="tactical Equipment">
                                             </div>
                                             <h4 class="newDevelopments__product_name">БОЙОВА СОРОЧКА CS PIXEL ММ14</h4>
@@ -292,320 +301,117 @@ Template Name: home
                         <?php }
                     }
                     wp_reset_postdata(); ?>
+                    <div class="carousel-item active">
+                        <div class="newDevelopments__cards row">
+                            <div class="newDevelopments__column col-12 col-md-6 col-lg-4 col-xl-3">
+                                <div class="newDevelopments__card item">
+                                    <svg class="tags">
+                                        <use xlink:href="<?php bloginfo('template_url'); ?>/app/img/sprite.svg#tag-sale"></use>
+                                    </svg>
 
-                    <!--                    <div class="carousel-item">-->
-                    <!--                        <div class="newDevelopments__cards row">-->
-                    <!--                            <div class="newDevelopments__column col-12 col-md-6 col-lg-4 col-xl-3">-->
-                    <!--                                <div class="newDevelopments__card item">-->
-                    <!--                                    <div class="tags">-->
-                    <!--                                        <svg class="">-->
-                    <!--                                            <use xlink:href="-->
-                    <?php //bloginfo('template_url'); ?><!--/app/img/sprite.svg#tag-sale."></use>-->
-                    <!--                                        </svg>-->
-                    <!--                                    </div>-->
-                    <!--                                    <div class="newDevelopments__photo_goods">-->
-                    <!--                                        <img class="newDevelopments__photo_vest"-->
-                    <!--                                             src="-->
-                    <?php //bloginfo('template_url'); ?><!--/app/img/newDevelopments/FRAME_PIDSUMOK.png" alt="tactical Equipment">-->
-                    <!--                                    </div>-->
-                    <!--                                    <h4 class="newDevelopments__product_name">БОЙОВА СОРОЧКА CS PIXEL ММ14</h4>-->
-                    <!--                                    <span class="newDevelopments__new_price">3 543,00 ₴</span>-->
-                    <!--                                    <span class="newDevelopments__old_price">4 168,00 ₴</span>-->
-                    <!--                                </div>-->
-                    <!--                                <div class="newDevelopments__btn-block d-flex align-items-center justify-content-center">-->
-                    <!--                                    <button class="newDevelopments__btn btn-orange ">-->
-                    <!--                                        <span class="newDevelopments__btn-text ">ДО КОШИКА</span>-->
-                    <!--                                        <span class="newDevelopments__btn-icon _icon-basket2"></span>-->
-                    <!--                                    </button>-->
-                    <!--                                    <button class="newDevelopments__btn btn-black">-->
-                    <!--                                        <span class="newDevelopments__btn-text">В ОБРАНЕ</span>-->
-                    <!--                                        <span class="newDevelopments__btn-icon _icon-white-frame-heart1"></span>-->
-                    <!--                                    </button>-->
-                    <!--                                </div>-->
-                    <!--                            </div>-->
-                    <!--                            <div class="newDevelopments__column col-12 col-md-6 col-lg-4 col-xl-3">-->
-                    <!--                                <div class="newDevelopments__card item">-->
-                    <!--                                    <div class="tags">-->
-                    <!--                                        <svg class="">-->
-                    <!--                                            <use xlink:href="-->
-                    <?php //bloginfo('template_url'); ?><!--/app/img/sprite.svg#tag-sale."></use>-->
-                    <!--                                        </svg>-->
-                    <!--                                    </div>-->
-                    <!--                                    <div class="newDevelopments__photo_goods">-->
-                    <!--                                        <img class="newDevelopments__photo_vest"-->
-                    <!--                                             src="-->
-                    <?php //bloginfo('template_url'); ?><!--/app/img/newDevelopments/COMBAT_SHIRT.png" alt="COMBAT SHIRT">-->
-                    <!--                                    </div>-->
-                    <!--                                    <h4 class="newDevelopments__product_name">БОЙОВА СОРОЧКА CS PIXEL ММ14</h4>-->
-                    <!--                                    <span class="newDevelopments__new_price">3 543,00 ₴</span>-->
-                    <!--                                    <span class="newDevelopments__old_price">4 168,00 ₴</span>-->
-                    <!--                                </div>-->
-                    <!--                                <div class="newDevelopments__btn-block d-flex align-items-center justify-content-center">-->
-                    <!--                                    <button class="newDevelopments__btn btn-orange ">-->
-                    <!--                                        <span class="newDevelopments__btn-text ">ДО КОШИКА</span>-->
-                    <!--                                        <span class="newDevelopments__btn-icon _icon-basket2"></span>-->
-                    <!--                                    </button>-->
-                    <!--                                    <button class="newDevelopments__btn btn-black">-->
-                    <!--                                        <span class="newDevelopments__btn-text">В ОБРАНЕ</span>-->
-                    <!--                                        <span class="newDevelopments__btn-icon _icon-white-frame-heart1"></span>-->
-                    <!--                                    </button>-->
-                    <!--                                </div>-->
-                    <!--                            </div>-->
-                    <!--                            <div class="newDevelopments__column col-12 col-md-6 col-lg-4 col-xl-3">-->
-                    <!--                                <div class="newDevelopments__card item">-->
-                    <!--                                    <div class="tags">-->
-                    <!--                                        <svg class="">-->
-                    <!--                                            <use xlink:href="-->
-                    <?php //bloginfo('template_url'); ?><!--/app/img/sprite.svg#tag-sale."></use>-->
-                    <!--                                        </svg>-->
-                    <!--                                    </div>-->
-                    <!--                                    <div class="newDevelopments__photo_goods">-->
-                    <!--                                        <img class="newDevelopments__photo_vest"-->
-                    <!--                                             src="-->
-                    <?php //bloginfo('template_url'); ?><!--/app/img/newDevelopments/chekhol-bronezhileta.png" alt="tactical Equipment">-->
-                    <!--                                    </div>-->
-                    <!--                                    <h4 class="newDevelopments__product_name">БОЙОВА СОРОЧКА CS PIXEL ММ14</h4>-->
-                    <!--                                    <span class="newDevelopments__new_price">3 543,00 ₴</span>-->
-                    <!--                                    <span class="newDevelopments__old_price">4 168,00 ₴</span>-->
-                    <!--                                </div>-->
-                    <!--                                <div class="newDevelopments__btn-block d-flex align-items-center justify-content-center">-->
-                    <!--                                    <button class="newDevelopments__btn btn-orange ">-->
-                    <!--                                        <span class="newDevelopments__btn-text ">ДО КОШИКА</span>-->
-                    <!--                                        <span class="newDevelopments__btn-icon _icon-basket2"></span>-->
-                    <!--                                    </button>-->
-                    <!--                                    <button class="newDevelopments__btn btn-black">-->
-                    <!--                                        <span class="newDevelopments__btn-text">В ОБРАНЕ</span>-->
-                    <!--                                        <span class="newDevelopments__btn-icon _icon-white-frame-heart1"></span>-->
-                    <!--                                    </button>-->
-                    <!--                                </div>-->
-                    <!--                            </div>-->
-                    <!--                            <div class="newDevelopments__column col-12 col-md-6 col-lg-4 col-xl-3">-->
-                    <!--                                <div class="newDevelopments__card item">-->
-                    <!--                                    <div class="tags">-->
-                    <!--                                        <svg class="">-->
-                    <!--                                            <use xlink:href="-->
-                    <?php //bloginfo('template_url'); ?><!--/app/img/sprite.svg#tag-sale."></use>-->
-                    <!--                                        </svg>-->
-                    <!--                                    </div>-->
-                    <!--                                    <div class="newDevelopments__photo_goods">-->
-                    <!--                                        <img class="newDevelopments__photo_vest"-->
-                    <!--                                             src="-->
-                    <?php //bloginfo('template_url'); ?><!--/app/img/newDevelopments/multicam.png" alt="tactical Equipment">-->
-                    <!--                                    </div>-->
-                    <!--                                    <h4 class="newDevelopments__product_name">БОЙОВА СОРОЧКА CS PIXEL ММ14</h4>-->
-                    <!--                                    <span class="newDevelopments__new_price">3 543,00 ₴</span>-->
-                    <!--                                    <span class="newDevelopments__old_price">4 168,00 ₴</span>-->
-                    <!--                                </div>-->
-                    <!--                                <div class="newDevelopments__btn-block d-flex align-items-center justify-content-center">-->
-                    <!--                                    <button class="newDevelopments__btn btn-orange ">-->
-                    <!--                                        <span class="newDevelopments__btn-text ">ДО КОШИКА</span>-->
-                    <!--                                        <span class="newDevelopments__btn-icon _icon-basket2"></span>-->
-                    <!--                                    </button>-->
-                    <!--                                    <button class="newDevelopments__btn btn-black">-->
-                    <!--                                        <span class="newDevelopments__btn-text">В ОБРАНЕ</span>-->
-                    <!--                                        <span class="newDevelopments__btn-icon _icon-white-frame-heart1"></span>-->
-                    <!--                                    </button>-->
-                    <!--                                </div>-->
-                    <!--                            </div>-->
-                    <!--                        </div>-->
-                    <!--                    </div>-->
-                </div>
-            </div>
-        </div>
-    </section>
+                                    <div class="newDevelopments__photo_goods">
+                                        <img class="newDevelopments__photo_vest"
+                                             src="<?php bloginfo('template_url'); ?>/app/img/newDevelopments/COMBAT_SHIRT.png"
+                                             alt="COMBAT SHIRT">
+                                    </div>
+                                    <h4 class="newDevelopments__product_name">БОЙОВА СОРОЧКА CS PIXEL ММ14</h4>
+                                    <span class="newDevelopments__new_price">3 543,00 ₴</span>
+                                    <span class="newDevelopments__old_price">4 168,00 ₴</span>
+                                </div>
+                                <div class="newDevelopments__btn-block d-flex align-items-center justify-content-center">
+                                    <button class="newDevelopments__btn btn-orange ">
+                                        <span class="newDevelopments__btn-text ">ДО КОШИКА</span>
+                                        <span class="newDevelopments__btn-icon _icon-basket2"></span>
+                                    </button>
+                                    <button class="newDevelopments__btn btn-black">
+                                        <span class="newDevelopments__btn-text">В ОБРАНЕ</span>
+                                        <span class="newDevelopments__btn-icon _icon-white-frame-heart1"></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="newDevelopments__column col-12 col-md-6 col-lg-4 col-xl-3">
+                                <div class="newDevelopments__card item">
 
-    <section class="newDevelopments paddingTB">
-        <div class="newDevelopments__container container">
-            <div class="newDevelopments__navigation_goods_cards d-flex justify-content-between">
-                <h2 class="newDevelopments__navigation_goods_title">Наші нові розробки</h2>
-                <div class="newDevelopments__navigation_goods_btn d-flex align-items-center justify-content-between">
-                    <div class="newDevelopments__arrow d-flex align-items-center ">
-                        <div class="newDevelopments__arrow_left" href="#carouselExampleControls2" role="button"
-                             data-slide="prev">
-                            <img src="<?php bloginfo('template_url'); ?>/app/img/newDevelopments/arrow_left.png"
-                                 alt="arrow left">
-                        </div>
-                        <div class="newDevelopments__arrow_right" href="#carouselExampleControls2" role="button"
-                             data-slide="next">
-                            <img src="<?php bloginfo('template_url'); ?>/app/img/newDevelopments/arrow_right.png"
-                                 alt="arrow right">
-                        </div>
-                    </div>
-                    <h4 class="newDevelopments__all_goods">Усі товари</h4>
-                </div>
-            </div>
-            <div class="slider_products">
-                <div class="slider_products__item">
-                    <div class="slider_products__wrapper">
-                        <div class="newDevelopments__card ">
-                            <svg class="tags">
-                                <use xlink:href="<?php bloginfo('template_url'); ?>/app/img/sprite.svg#tag-sale"></use>
-                            </svg>
-                            <div class="newDevelopments__photo_goods">
-                                <img class="newDevelopments__photo_vest"
-                                     src="
-                        <?php bloginfo('template_url'); ?>/app/img/newDevelopments/chekhol-bronezhileta.png"
-                                     alt="tactical Equipment">
+                                    <svg class="tags">
+                                        <use xlink:href="<?php bloginfo('template_url'); ?>/app/img/sprite.svg#tag-sale"></use>
+                                    </svg>
+                                    <div class="newDevelopments__photo_goods">
+                                        <img class="newDevelopments__photo_vest"
+                                             src="<?php bloginfo('template_url'); ?>/app/img/newDevelopments/chekhol-bronezhileta.png"
+                                             alt="tactical Equipment">
+                                    </div>
+                                    <h4 class="newDevelopments__product_name">БОЙОВА СОРОЧКА CS PIXEL ММ14</h4>
+                                    <span class="newDevelopments__new_price">3 543,00 ₴</span>
+                                    <span class="newDevelopments__old_price">4 168,00 ₴</span>
+                                </div>
+                                <div class="newDevelopments__btn-block d-flex align-items-center justify-content-center">
+                                    <button class="newDevelopments__btn btn-orange ">
+                                        <span class="newDevelopments__btn-text ">ДО КОШИКА</span>
+                                        <span class="newDevelopments__btn-icon _icon-basket2"></span>
+                                    </button>
+                                    <button class="newDevelopments__btn btn-black">
+                                        <span class="newDevelopments__btn-text">В ОБРАНЕ</span>
+                                        <span class="newDevelopments__btn-icon _icon-white-frame-heart1"></span>
+                                    </button>
+                                </div>
                             </div>
-                            <h4 class="newDevelopments__product_name">БОЙОВА СОРОЧКА CS PIXEL ММ14</h4>
-                            <span class="newDevelopments__new_price">3 543,00 ₴</span>
-                            <span class="newDevelopments__old_price">4 168,00 ₴</span>
-                        </div>
-                        <div class="newDevelopments__btn-block d-flex align-items-center justify-content-center">
-                            <button class="newDevelopments__btn btn-orange ">
-                                <span class="newDevelopments__btn-text ">ДО КОШИКА</span>
-                                <span class="newDevelopments__btn-icon _icon-basket2"></span>
-                            </button>
-                            <button class="newDevelopments__btn btn-black">
-                                <span class="newDevelopments__btn-text">В ОБРАНЕ</span>
-                                <span class="newDevelopments__btn-icon _icon-white-frame-heart1"></span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="slider_products__item">
-                    <div class="slider_products__wrapper">
-                        <div class="newDevelopments__card ">
-                            <svg class="tags">
-                                <use xlink:href="<?php bloginfo('template_url'); ?>/app/img/sprite.svg#tag-sale"></use>
-                            </svg>
-                            <div class="newDevelopments__photo_goods">
-                                <img class="newDevelopments__photo_vest"
-                                     src="
-                        <?php bloginfo('template_url'); ?>/app/img/newDevelopments/chekhol-bronezhileta.png"
-                                     alt="tactical Equipment">
+                            <div class="newDevelopments__column col-12 col-md-6 col-lg-4 col-xl-3">
+                                <div class="newDevelopments__card item">
+                                    <svg class="tags">
+                                        <use xlink:href="<?php bloginfo('template_url'); ?>/app/img/sprite.svg#tag-sale"></use>
+                                    </svg>
+                                    <div class="newDevelopments__photo_goods">
+                                        <img class="newDevelopments__photo_vest"
+                                             src="<?php bloginfo('template_url'); ?>/app/img/newDevelopments/multicam.png"
+                                             alt="tactical Equipment">
+                                    </div>
+                                    <h4 class="newDevelopments__product_name">БОЙОВА СОРОЧКА CS PIXEL ММ14</h4>
+                                    <span class="newDevelopments__new_price">3 543,00 ₴</span>
+                                    <span class="newDevelopments__old_price">4 168,00 ₴</span>
+                                </div>
+                                <div class="newDevelopments__btn-block d-flex align-items-center justify-content-center">
+                                    <button class="newDevelopments__btn btn-orange ">
+                                        <span class="newDevelopments__btn-text ">ДО КОШИКА</span>
+                                        <span class="newDevelopments__btn-icon _icon-basket2"></span>
+                                    </button>
+                                    <button class="newDevelopments__btn btn-black">
+                                        <span class="newDevelopments__btn-text">В ОБРАНЕ</span>
+                                        <span class="newDevelopments__btn-icon _icon-white-frame-heart1"></span>
+                                    </button>
+                                </div>
                             </div>
-                            <h4 class="newDevelopments__product_name">БОЙОВА СОРОЧКА CS PIXEL ММ14</h4>
-                            <span class="newDevelopments__new_price">3 543,00 ₴</span>
-                            <span class="newDevelopments__old_price">4 168,00 ₴</span>
-                        </div>
-                        <div class="newDevelopments__btn-block d-flex align-items-center justify-content-center">
-                            <button class="newDevelopments__btn btn-orange ">
-                                <span class="newDevelopments__btn-text ">ДО КОШИКА</span>
-                                <span class="newDevelopments__btn-icon _icon-basket2"></span>
-                            </button>
-                            <button class="newDevelopments__btn btn-black">
-                                <span class="newDevelopments__btn-text">В ОБРАНЕ</span>
-                                <span class="newDevelopments__btn-icon _icon-white-frame-heart1"></span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="slider_products__item">
-                    <div class="slider_products__wrapper">
-                        <div class="newDevelopments__card ">
-                            <svg class="tags">
-                                <use xlink:href="<?php bloginfo('template_url'); ?>/app/img/sprite.svg#tag-sale"></use>
-                            </svg>
-                            <div class="newDevelopments__photo_goods">
-                                <img class="newDevelopments__photo_vest"
-                                     src="
-                        <?php bloginfo('template_url'); ?>/app/img/newDevelopments/chekhol-bronezhileta.png"
-                                     alt="tactical Equipment">
+                            <div class="newDevelopments__column col-12 col-md-6 col-lg-4 col-xl-3">
+                                <div class="newDevelopments__card item">
+                                    <svg class="tags">
+                                        <use xlink:href="<?php bloginfo('template_url'); ?>/app/img/sprite.svg#tag-sale"></use>
+                                    </svg>
+                                    <div class="newDevelopments__photo_goods">
+                                        <img class="newDevelopments__photo_vest"
+                                             src="<?php bloginfo('template_url'); ?>/app/img/newDevelopments/FRAME_PIDSUMOK.png"
+                                             alt="tactical Equipment">
+                                    </div>
+                                    <h4 class="newDevelopments__product_name">БОЙОВА СОРОЧКА CS PIXEL ММ14</h4>
+                                    <span class="newDevelopments__new_price">3 543,00 ₴</span>
+                                    <span class="newDevelopments__old_price">4 168,00 ₴</span>
+                                </div>
+                                <div class="newDevelopments__btn-block d-flex align-items-center justify-content-center">
+                                    <button class="newDevelopments__btn btn-orange ">
+                                        <span class="newDevelopments__btn-text ">ДО КОШИКА</span>
+                                        <span class="newDevelopments__btn-icon _icon-basket2"></span>
+                                    </button>
+                                    <button class="newDevelopments__btn btn-black">
+                                        <span class="newDevelopments__btn-text">В ОБРАНЕ</span>
+                                        <span class="newDevelopments__btn-icon _icon-white-frame-heart1"></span>
+                                    </button>
+                                </div>
                             </div>
-                            <h4 class="newDevelopments__product_name">БОЙОВА СОРОЧКА CS PIXEL ММ14</h4>
-                            <span class="newDevelopments__new_price">3 543,00 ₴</span>
-                            <span class="newDevelopments__old_price">4 168,00 ₴</span>
-                        </div>
-                        <div class="newDevelopments__btn-block d-flex align-items-center justify-content-center">
-                            <button class="newDevelopments__btn btn-orange ">
-                                <span class="newDevelopments__btn-text ">ДО КОШИКА</span>
-                                <span class="newDevelopments__btn-icon _icon-basket2"></span>
-                            </button>
-                            <button class="newDevelopments__btn btn-black">
-                                <span class="newDevelopments__btn-text">В ОБРАНЕ</span>
-                                <span class="newDevelopments__btn-icon _icon-white-frame-heart1"></span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="slider_products__item">
-                    <div class="slider_products__wrapper">
-                        <div class="newDevelopments__card ">
-                            <svg class="tags">
-                                <use xlink:href="<?php bloginfo('template_url'); ?>/app/img/sprite.svg#tag-sale"></use>
-                            </svg>
-                            <div class="newDevelopments__photo_goods">
-                                <img class="newDevelopments__photo_vest"
-                                     src="
-                        <?php bloginfo('template_url'); ?>/app/img/newDevelopments/chekhol-bronezhileta.png"
-                                     alt="tactical Equipment">
-                            </div>
-                            <h4 class="newDevelopments__product_name">БОЙОВА СОРОЧКА CS PIXEL ММ14</h4>
-                            <span class="newDevelopments__new_price">3 543,00 ₴</span>
-                            <span class="newDevelopments__old_price">4 168,00 ₴</span>
-                        </div>
-                        <div class="newDevelopments__btn-block d-flex align-items-center justify-content-center">
-                            <button class="newDevelopments__btn btn-orange ">
-                                <span class="newDevelopments__btn-text ">ДО КОШИКА</span>
-                                <span class="newDevelopments__btn-icon _icon-basket2"></span>
-                            </button>
-                            <button class="newDevelopments__btn btn-black">
-                                <span class="newDevelopments__btn-text">В ОБРАНЕ</span>
-                                <span class="newDevelopments__btn-icon _icon-white-frame-heart1"></span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="slider_products__item">
-                    <div class="slider_products__wrapper">
-                        <div class="newDevelopments__card ">
-                            <svg class="tags">
-                                <use xlink:href="<?php bloginfo('template_url'); ?>/app/img/sprite.svg#tag-sale"></use>
-                            </svg>
-                            <div class="newDevelopments__photo_goods">
-                                <img class="newDevelopments__photo_vest"
-                                     src="
-                        <?php bloginfo('template_url'); ?>/app/img/newDevelopments/chekhol-bronezhileta.png"
-                                     alt="tactical Equipment">
-                            </div>
-                            <h4 class="newDevelopments__product_name">БОЙОВА СОРОЧКА CS PIXEL ММ14</h4>
-                            <span class="newDevelopments__new_price">3 543,00 ₴</span>
-                            <span class="newDevelopments__old_price">4 168,00 ₴</span>
-                        </div>
-                        <div class="newDevelopments__btn-block d-flex align-items-center justify-content-center">
-                            <button class="newDevelopments__btn btn-orange ">
-                                <span class="newDevelopments__btn-text ">ДО КОШИКА</span>
-                                <span class="newDevelopments__btn-icon _icon-basket2"></span>
-                            </button>
-                            <button class="newDevelopments__btn btn-black">
-                                <span class="newDevelopments__btn-text">В ОБРАНЕ</span>
-                                <span class="newDevelopments__btn-icon _icon-white-frame-heart1"></span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="slider_products__item">
-                    <div class="slider_products__wrapper">
-                        <div class="newDevelopments__card ">
-                            <svg class="tags">
-                                <use xlink:href="<?php bloginfo('template_url'); ?>/app/img/sprite.svg#tag-sale"></use>
-                            </svg>
-                            <div class="newDevelopments__photo_goods">
-                                <img class="newDevelopments__photo_vest"
-                                     src="
-                        <?php bloginfo('template_url'); ?>/app/img/newDevelopments/chekhol-bronezhileta.png"
-                                     alt="tactical Equipment">
-                            </div>
-                            <h4 class="newDevelopments__product_name">БОЙОВА СОРОЧКА CS PIXEL ММ14</h4>
-                            <span class="newDevelopments__new_price">3 543,00 ₴</span>
-                            <span class="newDevelopments__old_price">4 168,00 ₴</span>
-                        </div>
-                        <div class="newDevelopments__btn-block d-flex align-items-center justify-content-center">
-                            <button class="newDevelopments__btn btn-orange ">
-                                <span class="newDevelopments__btn-text ">ДО КОШИКА</span>
-                                <span class="newDevelopments__btn-icon _icon-basket2"></span>
-                            </button>
-                            <button class="newDevelopments__btn btn-black">
-                                <span class="newDevelopments__btn-text">В ОБРАНЕ</span>
-                                <span class="newDevelopments__btn-icon _icon-white-frame-heart1"></span>
-                            </button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
 
     <section class="tacticalEquipment paddingTB">
         <div class="tacticalEquipment__container container">

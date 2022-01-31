@@ -13,6 +13,23 @@
                         <li class="footer__menu_item_title"><h4>Каталог товарів</h4></li>
                         <li class="footer__menu_catalog">
                             <ul>
+                                <?php wp_nav_menu([
+                                    'theme_location'  => 'footer',
+                                    'container'       => null,
+                                    'container_class' => '',
+                                    'container_id'    => '',
+                                    'menu_class'      => 'footer__menu_link',
+                                    'menu_id'         => '',
+                                    'echo'            => true,
+                                    'fallback_cb'     => 'wp_page_menu',
+                                    'before'          => '',
+                                    'after'           => '',
+                                    'link_before'     => '',
+                                    'link_after'      => '',
+                                    'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+                                    'depth'           => 0,
+                                    'walker'          => '',
+                                ])?>
                                 <li class="footer__menu_item_variant paragraph2">
                                     <a class="footer__menu_link" href="#">Одяг</a>
                                 </li>

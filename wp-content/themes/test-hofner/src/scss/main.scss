@@ -198,7 +198,7 @@ ul li.menu-item a{
   }
 }
 
-
+ul.sub-menu li
 .list_languages,
 .list_currency {
   display: none;
@@ -769,6 +769,9 @@ ul li.menu-item a{
 
 .footer__menu_item_text {
   margin-left: 33px;
+  &::after{
+
+  }
 }
 
 /*=======================================================================*/

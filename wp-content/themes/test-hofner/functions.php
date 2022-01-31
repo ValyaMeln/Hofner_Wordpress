@@ -18,7 +18,7 @@ add_action('wp_enqueue_scripts', function () {
 
     wp_enqueue_script('jquery');
     wp_enqueue_script('bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js', array('jquery'), 'null', true);
-    wp_enqueue_script('slick', get_template_directory_uri() . '/app/js/slick.min.js', array('jquery'), 'null', true);
+//    wp_enqueue_script('slick', get_template_directory_uri() . '/app/js/slick.min.js', array('jquery'), 'null', true);
     wp_enqueue_script('main', get_template_directory_uri() . '/app/js/main.js', array('jquery'), 'null', true);
 });
 
@@ -41,7 +41,7 @@ add_action('wp_enqueue_scripts', function () {
 add_action('after_setup_theme', 'theme_register_nav_menu');
 function theme_register_nav_menu(){
     register_nav_menu('top', 'меню в шапці');
-    register_nav_menu('bottom', 'меню в підвалі');
+    register_nav_menu('footer', 'меню в підвалі');
 };
 
 
