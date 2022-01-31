@@ -10,18 +10,30 @@ add_action('wp_enqueue_scripts', function () {
     wp_enqueue_style('fonts-gstatic', 'https://fonts.gstatic.com');
     wp_enqueue_style('fonts-alumni-sans', 'https://fonts.googleapis.com/css2?family=Alumni+Sans:wght@400;500;600;700&display=swap');
     wp_enqueue_style('fonts-roboto', 'https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-    wp_enqueue_style('style', get_template_directory_uri() . '/app/css/main.min.css');
-//    wp_enqueue_style('style', get_stylesheet_uri());
+    wp_enqueue_style('style', get_stylesheet_uri());
+    wp_enqueue_style('style-gulp', get_template_directory_uri() . '/app/css/main.min.css');
 
-    wp_deregister_script('jquery');
+
+//    wp_deregister_script('jquery');
+//    wp_register_script('jquery', 'https://code.jquery.com/jquery-3.6.0.min.js');
+//
+//    wp_enqueue_script('jquery');
+//    wp_enqueue_script('bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js', array('jquery'), 'null', true);
+////    wp_enqueue_script('slick', get_template_directory_uri() . '/app/js/slick.min.js', array('jquery'), 'null', true);
+//    wp_enqueue_script('main', get_template_directory_uri() . '/app/js/main.js', true);
+});
+
+add_action('wp_footer', 'scripts_theme');
+
+function scripts_theme(){
+wp_deregister_script('jquery');
     wp_register_script('jquery', 'https://code.jquery.com/jquery-3.6.0.min.js');
 
     wp_enqueue_script('jquery');
-    wp_enqueue_script('bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js', array('jquery'), 'null', true);
+    wp_enqueue_script('bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js', array('jquery'), '', true);
 //    wp_enqueue_script('slick', get_template_directory_uri() . '/app/js/slick.min.js', array('jquery'), 'null', true);
-    wp_enqueue_script('main', get_template_directory_uri() . '/app/js/main.js', array('jquery'), 'null', true);
-});
-
+    wp_enqueue_script('main', get_template_directory_uri() . '/app/js/main.js', '', 'null', true);
+};
 
 //add_action('wp_enqueue_scripts', 'theme_name_scripts');
 //// add_action('wp_print_styles', 'theme_name_scripts'); // можно использовать этот хук он более поздний
@@ -39,7 +51,8 @@ add_action('wp_enqueue_scripts', function () {
 //<!--<script src="js/main.js"></script>-->
 
 add_action('after_setup_theme', 'theme_register_nav_menu');
-function theme_register_nav_menu(){
+function theme_register_nav_menu()
+{
     register_nav_menu('top', 'меню в шапці');
     register_nav_menu('footer', 'меню в підвалі');
 };

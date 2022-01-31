@@ -1,8 +1,11 @@
 <footer class="footer">
     <div class="footer__img">
-        <img class="footer__img_bg" src="<?php bloginfo('template_url'); ?>/app/img/footer/footer_img.png" alt="footer image"/>
+        <img class="footer__img_bg" src="<?php bloginfo('template_url'); ?>/app/img/footer/footer_img.png"
+             alt="footer image"/>
         <div class="footer__container container">
-            <a class="footer__btn_go_up" href="#"><img src="<?php bloginfo('template_url'); ?>/app/img/footer/go_up-button.png" alt="go up button"/></a>
+            <a class="footer__btn_go_up" href="#"><img
+                        src="<?php bloginfo('template_url'); ?>/app/img/footer/go_up-button.png"
+                        alt="go up button"/></a>
         </div>
     </div>
     <div class="footer__menu">
@@ -14,22 +17,22 @@
                         <li class="footer__menu_catalog">
                             <ul>
                                 <?php wp_nav_menu([
-                                    'theme_location'  => 'footer',
-                                    'container'       => null,
+                                    'theme_location' => 'footer',
+                                    'container' => null,
                                     'container_class' => '',
-                                    'container_id'    => '',
-                                    'menu_class'      => 'footer__menu_link',
-                                    'menu_id'         => '',
-                                    'echo'            => true,
-                                    'fallback_cb'     => 'wp_page_menu',
-                                    'before'          => '',
-                                    'after'           => '',
-                                    'link_before'     => '',
-                                    'link_after'      => '',
-                                    'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-                                    'depth'           => 0,
-                                    'walker'          => '',
-                                ])?>
+                                    'container_id' => '',
+                                    'menu_class' => 'footer__menu_link',
+                                    'menu_id' => '',
+                                    'echo' => true,
+                                    'fallback_cb' => 'wp_page_menu',
+                                    'before' => '',
+                                    'after' => '',
+                                    'link_before' => '',
+                                    'link_after' => '',
+                                    'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+                                    'depth' => 0,
+                                    'walker' => '',
+                                ]) ?>
                                 <li class="footer__menu_item_variant paragraph2">
                                     <a class="footer__menu_link" href="#">Одяг</a>
                                 </li>
@@ -113,18 +116,23 @@
                         <div class="footer__menu_item_text">Електронна адреса</div>
                     </li>
                 </ul>
-                <div class="footer__subscription">
+                <form class="footer__subscription">
                     <h4 class="footer__subscription_title">Підписка на новини та акції</h4>
-                    <div class="footer__subscription_wrapper_inp">
-                        <input class="inp paragraph2" spellcheck="false"/>
-                        <div class="label paragraph2">E-mail</div>
-                    </div>
+                    <?php echo do_shortcode('[contact-form-7 id="57" title="Контактна форма"]'); ?>
 
-                    <button class="footer__subscription_btn goTo">
-                        ОФОРМИТИ ПІДПИСКУ
-                    </button>
+<!--                    <div class="footer__subscription_wrapper_inp">-->
+<!--                        <input class="inp paragraph2" spellcheck="false"/>-->
+<!--                        <div class="label paragraph2">E-mail</div>-->
+<!--                        <button class="footer__subscription_btn goTo">-->
+<!--                            ОФОРМИТИ ПІДПИСКУ-->
+<!--                        </button>-->
+<!--                    </div>-->
+<!---->
+<!--                    <button class="footer__subscription_btn goTo">-->
+<!--                        ОФОРМИТИ ПІДПИСКУ-->
+<!--                    </button>-->
 
-                </div>
+                </form>
             </div>
             <a class="footer__btn_go_up_small" href="#">
                 <svg class="footer__go_up_small">

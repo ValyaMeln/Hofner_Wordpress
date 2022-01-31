@@ -4,6 +4,7 @@ Template Name: home
 
 */
 ?>
+<?php //echo get_template_directory_uri(); ?>
 <?php get_header(); ?>
 
     <section class="slider">
@@ -161,7 +162,6 @@ Template Name: home
                 <div class="carousel-inner">
                     <?php
                     global $post;
-
                     $myposts = get_posts([
                         'numberposts' => -1,
                     ]);
@@ -194,7 +194,8 @@ Template Name: home
                     <?php the_content(
                         array(
                             'class' => 'newDevelopments__new_price'
-                        )); ?> </span>
+                        )); ?>
+                                            </span>
                                             <span class="newDevelopments__old_price">4 168,00 ₴</span>
                                         </div>
                                         <div class="newDevelopments__btn-block d-flex align-items-center justify-content-center">
