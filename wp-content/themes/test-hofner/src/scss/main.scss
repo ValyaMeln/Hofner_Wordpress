@@ -198,7 +198,7 @@ ul li.menu-item a{
   }
 }
 
-ul.sub-menu li
+
 .list_languages,
 .list_currency {
   display: none;
@@ -807,7 +807,12 @@ ul.sub-menu li
   color: black;
   transition: all 0.3s ease 0s;
   background: #FFFFFF;
-  margin-bottom: 10px;
+  //margin-bottom: 10px;
+  &:focus::-webkit-input-placeholder {
+    background: transparent;
+    color: #FCB500;
+    transform: translateY(-2.875rem);
+  }
 }
 
 input:focus ~ .label {
@@ -815,6 +820,7 @@ input:focus ~ .label {
   color: #FCB500;
   transform: translateY(-2.875rem);
 }
+
 
 .footer__subscription_btn {
   width: 250px;
@@ -897,18 +903,6 @@ input:focus ~ .label {
   left: 0;
   margin: auto;
 }
-
-//.footer__bottom_business::before {
-//  content: "";
-//  position: absolute;
-//  height: 23px;
-//  width: 23px;
-//  top: 0;
-//  bottom: 0;
-//  left: 0;
-//  margin: auto;
-//  background: transparent url(../img/footer/icon-wss.svg) 0 0/100% no-repeat;
-//}
 
 
 @import "modal";

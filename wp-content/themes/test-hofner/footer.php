@@ -1,4 +1,4 @@
-<footer class="footer">
+<footer class="footer" id="footer">
     <div class="footer__img">
         <img class="footer__img_bg" src="<?php bloginfo('template_url'); ?>/app/img/footer/footer_img.png"
              alt="footer image"/>
