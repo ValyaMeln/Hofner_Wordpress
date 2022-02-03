@@ -79,80 +79,70 @@
                 </a>
             </div>
 
-            <!--                        <nav class=" ">-->
 
 
-            <?php wp_nav_menu(array(
-                'theme_location' => 'top',
-                'container' => null,
-                'menu_class' => 'header__menu_font header__menu_body'
-            )); ?>
-<!--                        <ul class="header__menu_body header__menu_font">-->
-<!--                            <li class="header__menu_link_wrapper">-->
-<!--                                <a href="#" class="header__menu_link">Одяг</a>-->
-<!--                            </li>-->
-<!--                            <li class="header__menu_link_wrapper">-->
-<!--                                <a href="#" class="header__menu_link">Медицина</a>-->
-<!--                            </li>-->
-<!--                            <li class="header__menu_link_wrapper">-->
-<!--                                <div>-->
-<!--                                    <a href="#" class="header__menu_link">Підсумки</a>-->
-<!--                                </div>-->
-<!--                                <div class="header__dropdown_menu row">-->
-<!--                                    <div class=" col-lg-12 col-xl-6">-->
-<!--                                        <ul class=" header__dropdown_menu_list paragraph2">-->
-<!--                                            <li class="header__dropdown-menu-item">-->
-<!--                                                Підсумки для магазинів-->
-<!--                                                <ul class="header__dropdown-menu_results_shops">-->
-<!--                                                    <li class="header__dropdown-menu_results_shops_item">Для пістолетних-->
-<!--                                                        магазинів-->
-<!--                                                    </li>-->
-<!--                                                    <li class="header__dropdown-menu_results_shops_item">Для автоматних-->
-<!--                                                        магазинів-->
-<!--                                                    </li>-->
-<!--                                                </ul>-->
-<!--                                            </li>-->
-<!--                                            <li class="header__dropdown-menu-item">-->
-<!--                                                Для гранат-->
-<!--                                            </li>-->
-<!--                                            <li class="header__dropdown-menu-item">-->
-<!--                                                Для рацій-->
-<!--                                            </li>-->
-<!--                                            <li class="header__dropdown-menu-item">-->
-<!--                                                Універсальні-->
-<!--                                            </li>-->
-<!---->
-<!--                                        </ul>-->
-<!--                                    </div>-->
-<!--                                    <div class="col-lg-12 col-xl-6">-->
-<!--                                        <ul class="paragraph2">-->
-<!--                                            <li class="header__dropdown-menu-item">-->
-<!--                                                Утилітарні-->
-<!--                                            </li>-->
-<!--                                            <li class="header__dropdown-menu-item">-->
-<!--                                                Пістолетні кобури-->
-<!--                                            </li>-->
-<!--                                            <li class="header__dropdown-menu-item">-->
-<!--                                                Чохол короба ПКМ-->
-<!--                                            </li>-->
-<!--                                            <li class="header__dropdown-menu-item">-->
-<!--                                                Для гідросистеми-->
-<!--                                            </li>-->
-<!--                                            <li class="header__dropdown-menu-item">-->
-<!--                                                Сумка-сухарка-->
-<!--                                            </li>-->
-<!--                                            <li class="header__dropdown-menu-item">-->
-<!--                                                Сумка для скиду магазинів-->
-<!--                                            </li>-->
-<!--                                        </ul>-->
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                            </li>-->
-<!--                            <li class="header__menu_link_wrapper">-->
-<!--                                <a href="#" class="header__menu_link">Рюкзаки</a></li>-->
-<!--                            <li class="header__menu_link_wrapper">-->
-<!--                                <a href="#" class="header__menu_link">Розгрузки</a></li>-->
-<!--                        </ul>-->
+
+
+
+
+
+                        <ul class="header__menu_body header__menu_font">
+                            <?php wp_nav_menu(array(
+                                'theme_location' => 'top',
+                                'container' => false,
+                                'items_wrap'=> '<ul class="%2$s">%3$s</ul>',
+                                'menu_class' => 'header__menu_body header__menu_font'
+                            )); ?>
+                                <div class="header__dropdown_menu row">
+                                    <div class=" col-lg-12 col-xl-6">
+                                        <ul class=" header__dropdown_menu_list paragraph2">
+                                            <li class="header__dropdown-menu-item">
+                                                Підсумки для магазинів
+                                                <ul class="header__dropdown-menu_results_shops">
+                                                    <li class="header__dropdown-menu_results_shops_item">Для пістолетних
+                                                        магазинів
+                                                    </li>
+                                                    <li class="header__dropdown-menu_results_shops_item">Для автоматних
+                                                        магазинів
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="header__dropdown-menu-item">
+                                                Для гранат
+                                            </li>
+                                            <li class="header__dropdown-menu-item">
+                                                Для рацій
+                                            </li>
+                                            <li class="header__dropdown-menu-item">
+                                                Універсальні
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                    <div class="col-lg-12 col-xl-6">
+                                        <ul class="paragraph2">
+                                            <li class="header__dropdown-menu-item">
+                                                Утилітарні
+                                            </li>
+                                            <li class="header__dropdown-menu-item">
+                                                Пістолетні кобури
+                                            </li>
+                                            <li class="header__dropdown-menu-item">
+                                                Чохол короба ПКМ
+                                            </li>
+                                            <li class="header__dropdown-menu-item">
+                                                Для гідросистеми
+                                            </li>
+                                            <li class="header__dropdown-menu-item">
+                                                Сумка-сухарка
+                                            </li>
+                                            <li class="header__dropdown-menu-item">
+                                                Сумка для скиду магазинів
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </ul>
+                        </ul>
             <!--                        </nav>-->
             <ul class="header__menu_buttons d-flex align-items-center">
                 <li class="header__menu_button _icon-search">
