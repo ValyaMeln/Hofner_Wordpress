@@ -104,7 +104,7 @@
                     <li class="footer__menu_item_variant paragraph2">
                         <div class="footer__menu_item_phone d-flex ">
                             <div class="_icon-icon-phone"></div>
-                            <a class="footer__menu_link link_tel" href="tel:+380968120013">+38 (096) 812 00 13</a>
+                            <a class="footer__menu_link link_tel" href="tel:<?php the_field('phone-number');?>"><?php the_field('phone');?></a>
                         </div>
                         <div class="footer__menu_item_text">Пн–Сб, 09:00–19:00</div>
                     </li>
@@ -120,26 +120,12 @@
                     <h4 class="footer__subscription_title">Підписка на новини та акції</h4>
                     <?php echo do_shortcode('[contact-form-7 id="57" title="Контактна форма"]'); ?>
 
-<!--                    <div class="footer__subscription_wrapper_inp">-->
-<!--                        <input class="inp paragraph2" spellcheck="false"/>-->
-<!--                        <div class="label paragraph2">E-mail</div>-->
-<!--                        <button class="footer__subscription_btn goTo">-->
-<!--                            ОФОРМИТИ ПІДПИСКУ-->
-<!--                        </button>-->
-<!--                    </div>-->
-<!---->
-<!--                    <button class="footer__subscription_btn goTo">-->
-<!--                        ОФОРМИТИ ПІДПИСКУ-->
-<!--                    </button>-->
-
                 </form>
             </div>
             <a class="footer__btn_go_up_small" href="#">
                 <svg class="footer__go_up_small">
                     <use xlink:href="<?php bloginfo('template_url'); ?>/app/img/sprite.svg#go_up-btn_small"></use>
                 </svg>
-                <!--                <img src="<?php bloginfo('template_url'); ?>/app/img/footer/go_up-btn_small.svg"-->
-                <!--                     alt="go up button"/>-->
             </a>
         </div>
     </div>
@@ -167,13 +153,13 @@
                 <div class="footer__bottom_cardsAndSocial d-flex align-items-center">
                     <ul class="footer__bottom_socials d-flex">
                         <li class="footer__bottom_social_item">
-                            <a href="#" class="footer__bottom_social_link _icon-facebook"></a>
+                            <a href="<?php the_field('facebook-link');?>" class="footer__bottom_social_link _icon-facebook"></a>
                         </li>
                         <li class="footer__bottom_social_item">
-                            <a href="#" class="footer__bottom_social_link _icon-instagram"></a>
+                            <a href="<?php the_field('instagram-link');?>" class="footer__bottom_social_link _icon-instagram"></a>
                         </li>
                         <li class="footer__bottom_social_item">
-                            <a href="#" class="footer__bottom_social_link _icon-youtube"></a>
+                            <a href="<?php the_field('youtube-link');?>" class="footer__bottom_social_link _icon-youtube"></a>
                         </li>
                     </ul>
                 </div>

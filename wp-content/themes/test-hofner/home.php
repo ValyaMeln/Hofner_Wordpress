@@ -82,56 +82,55 @@ Template Name: home
             <div class="ourProducts__product row">
                 <div class="ourProducts__product_column col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4">
                     <div class="ourProducts__product_item has_no_padding item">
-                        <h2 class="ourProducts__title">Наші товари</h2>
+                        <h2 class="ourProducts__title"><?php the_field('title-our-goods');?></h2>
                         <p class="ourProducts__product_text">
-                            Ми ретельно контролюємо виготовлення кожної частини спорядження та відбираємо тільки кращі
-                            матеріали
+                            <?php the_field('subtitle -our-goods');?>
                         </p>
                     </div>
                 </div>
                 <div class="ourProducts__product_column col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4">
                     <div class="ourProducts__product_item ourProducts__clothing item">
-                        <h5 class="ourProducts__product_choose choose">Обирай</h5>
+                        <h5 class="ourProducts__product_choose choose"><?php the_field('choose');?></h5>
                         <h2 class="ourProducts__product_title">
-                            Одяг
+                            <?php the_field('clothing-category');?>
                         </h2>
-                        <a class="ourProducts__product_all_goods _icon-Vector-3" href="#">Усі товари</a>
+                        <a class="ourProducts__product_all_goods _icon-Vector-3" href="#"><?php the_field('all-goods');?></a>
                     </div>
                 </div>
                 <div class="ourProducts__product_column col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4">
                     <div class="ourProducts__product_item ourProducts__medicine item">
-                        <h5 class="ourProducts__product_choose choose">Обирай</h5>
+                        <h5 class="ourProducts__product_choose choose"><?php the_field('choose');?></h5>
                         <h2 class="ourProducts__product_title">
-                            Медицина
+                            <?php the_field('medicine-category');?>
                         </h2>
-                        <a class="ourProducts__product_all_goods _icon-Vector-3" href="#">Усі товари</a>
+                        <a class="ourProducts__product_all_goods _icon-Vector-3" href="#"><?php the_field('all-goods');?></a>
                     </div>
                 </div>
                 <div class="ourProducts__product_column col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4">
                     <div class="ourProducts__product_item ourProducts__results item">
-                        <h5 class="ourProducts__product_choose choose">Обирай</h5>
+                        <h5 class="ourProducts__product_choose choose"><?php the_field('choose');?></h5>
                         <h2 class="ourProducts__product_title">
-                            Підсумки
+                            <?php the_field('pouch-category');?>
                         </h2>
-                        <a class="ourProducts__product_all_goods _icon-Vector-3" href="#">Усі товари</a>
+                        <a class="ourProducts__product_all_goods _icon-Vector-3" href="#"><?php the_field('all-goods');?></a>
                     </div>
                 </div>
                 <div class="ourProducts__product_column col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4">
                     <div class="ourProducts__product_item ourProducts__backpacks item">
-                        <h5 class="ourProducts__product_choose choose">Обирай</h5>
+                        <h5 class="ourProducts__product_choose choose"><?php the_field('choose');?></h5>
                         <h2 class="ourProducts__product_title">
-                            Рюкзаки
+                            <?php the_field('backpack-category');?>
                         </h2>
-                        <a class="ourProducts__product_all_goods _icon-Vector-3" href="#">Усі товари</a>
+                        <a class="ourProducts__product_all_goods _icon-Vector-3" href="#"><?php the_field('all-goods');?></a>
                     </div>
                 </div>
                 <div class="ourProducts__product_column col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4">
                     <div class="ourProducts__product_item ourProducts__unloading item">
-                        <h5 class="ourProducts__product_choose choose">Обирай</h5>
+                        <h5 class="ourProducts__product_choose choose"><?php the_field('choose');?></h5>
                         <h2 class="ourProducts__product_title _icon-user_letter path2">
-                            Розгрузки
+                            <?php the_field('unloading-category');?>
                         </h2>
-                        <a class="ourProducts__product_all_goods _icon-Vector-3" href="#">Усі товари</a>
+                        <a class="ourProducts__product_all_goods _icon-Vector-3" href="#"><?php the_field('all-goods');?></a>
                     </div>
                 </div>
             </div>
