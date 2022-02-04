@@ -78,12 +78,13 @@
                     <img src="<?php bloginfo('template_url'); ?>/app/img/headerMenu/logo_bottom.png" alt="logo">
                 </a>
             </div>
-            <ul class="header__menu_body header__menu_font">
+
+<!--            <ul class="header__menu_body header__menu_font">-->
                 <?php wp_nav_menu(array(
                     'theme_location' => 'top',
                     'container' => false,
                     'items_wrap' => '<ul class="%2$s">%3$s</ul>',
-                    'menu_class' => 'header__menu_body header__menu_font'
+                    'menu_class' => 'header__menu_body header__menu_font',
                 )); ?>
                 <div class="header__dropdown_menu row">
                     <div class=" col-lg-12 col-xl-6">
@@ -133,9 +134,10 @@
                             </li>
                         </ul>
                     </div>
-            </ul>
-            </ul>
-            <!--                        </nav>-->
+                </div>
+
+<!--            </ul>-->
+
             <ul class="header__menu_buttons d-flex align-items-center">
                 <li class="header__menu_button _icon-search">
                 </li>

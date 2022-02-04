@@ -15,40 +15,30 @@
                     <ul>
                         <li class="footer__menu_item_title"><h4>Каталог товарів</h4></li>
                         <li class="footer__menu_catalog">
-                            <ul>
-                                <?php wp_nav_menu([
-                                    'theme_location' => 'footer',
-                                    'container' => null,
-                                    'container_class' => '',
-                                    'container_id' => '',
-                                    'menu_class' => 'footer__menu_link',
-                                    'menu_id' => '',
-                                    'echo' => true,
-                                    'fallback_cb' => 'wp_page_menu',
-                                    'before' => '',
-                                    'after' => '',
-                                    'link_before' => '',
-                                    'link_after' => '',
-                                    'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-                                    'depth' => 0,
-                                    'walker' => '',
-                                ]) ?>
-                                <li class="footer__menu_item_variant paragraph2">
-                                    <a class="footer__menu_link" href="#">Одяг</a>
-                                </li>
-                                <li class="footer__menu_item_variant paragraph2">
-                                    <a class="footer__menu_link" href="#">Медицина</a>
-                                </li>
-                                <li class="footer__menu_item_variant paragraph2">
-                                    <a class="footer__menu_link" href="#">Підсумки</a>
-                                </li>
-                                <li class="footer__menu_item_variant paragraph2">
-                                    <a class="footer__menu_link" href="#">Рюкзаки</a>
-                                </li>
-                                <li class="footer__menu_item_variant paragraph2">
-                                    <a class="footer__menu_link" href="#">Розгрузки</a>
-                                </li>
-                            </ul>
+<!--                            <ul>-->
+
+                                <?php wp_nav_menu(array(
+                                    'theme_location' => 'bottom',
+                                    'container' => false,
+                                    'items_wrap' => '<ul class="%2$s">%3$s</ul>',
+                                    'menu_class' => '',
+                                )); ?>
+<!--                                <li class="footer__menu_item_variant paragraph2">-->
+<!--                                    <a class="footer__menu_link" href="#">Одяг</a>-->
+<!--                                </li>-->
+<!--                                <li class="footer__menu_item_variant paragraph2">-->
+<!--                                    <a class="footer__menu_link" href="#">Медицина</a>-->
+<!--                                </li>-->
+<!--                                <li class="footer__menu_item_variant paragraph2">-->
+<!--                                    <a class="footer__menu_link" href="#">Підсумки</a>-->
+<!--                                </li>-->
+<!--                                <li class="footer__menu_item_variant paragraph2">-->
+<!--                                    <a class="footer__menu_link" href="#">Рюкзаки</a>-->
+<!--                                </li>-->
+<!--                                <li class="footer__menu_item_variant paragraph2">-->
+<!--                                    <a class="footer__menu_link" href="#">Розгрузки</a>-->
+<!--                                </li>-->
+<!--                            </ul>-->
                         </li>
                     </ul>
                 </li>

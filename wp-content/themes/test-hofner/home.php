@@ -5,6 +5,7 @@ Template Name: home
 */
 ?>
 <?php //echo get_template_directory_uri(); ?>
+
 <?php get_header(); ?>
 
     <section class="slider">
