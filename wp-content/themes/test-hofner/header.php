@@ -31,14 +31,15 @@
         <div class="container d-flex justify-content-between">
             <div class="d-flex align-items-center">
                 <div class="header__information_workSchedule">
-                    <?php the_field('work-schedule');?>
+                    <?php the_field('work-schedule'); ?>
                 </div>
-                <a class="header_information_phone" href="tel:<?php the_field('phone-number');?>"><?php the_field('phone');?></a>
+                <a class="header_information_phone"
+                   href="tel:<?php the_field('phone-number'); ?>"><?php the_field('phone'); ?></a>
             </div>
             <div class="d-flex">
                 <div class="header__selects">
                     <div class="header__select_language">
-                        <button class="header__select_btn_language"><?php the_field('language');?></button>
+                        <button class="header__select_btn_language"><?php the_field('language'); ?></button>
                         <ul class="list_languages">
                             <li class="list_languages_item">УКРАЇНСЬКА</li>
                             <li class="list_languages_item">РУССКИЙ</li>
@@ -48,7 +49,7 @@
                 </div>
                 <div class="header__selects">
                     <div class="header__select_currency">
-                        <button class="header__select_btn_currency"><?php the_field('currency');?></button>
+                        <button class="header__select_btn_currency"><?php the_field('currency'); ?></button>
                         <ul class="list_currency">
                             <li class="list_languages_item">Uah (₴)</li>
                             <li class="list_languages_item">eur (€)</li>
@@ -69,8 +70,18 @@
                 </li>
 
             </ul>
+
             <a href="#" class="header__menu_logo">
-                <img src="<?php bloginfo('template_url'); ?>/app/img/headerMenu/logo.png" alt="logo">
+                <?php
+                $logo_img = '';
+                if ($custom_logo_id = get_theme_mod('custom_logo')) {
+                    $logo_img = wp_get_attachment_image($custom_logo_id, 'full', false, array(
+                        'class' => '',
+                        'itemprop' => 'logo',
+                    ));
+                }
+                echo $logo_img;
+                ?>
             </a>
             <div class="header__menu_logo_top">
                 <a href="#">
@@ -79,64 +90,64 @@
                 </a>
             </div>
 
-<!--            <ul class="header__menu_body header__menu_font">-->
-                <?php wp_nav_menu(array(
-                    'theme_location' => 'top',
-                    'container' => false,
-                    'items_wrap' => '<ul class="%2$s">%3$s</ul>',
-                    'menu_class' => 'header__menu_body header__menu_font',
-                )); ?>
-                <div class="header__dropdown_menu row">
-                    <div class=" col-lg-12 col-xl-6">
-                        <ul class=" header__dropdown_menu_list paragraph2">
-                            <li class="header__dropdown-menu-item">
-                                Підсумки для магазинів
-                                <ul class="header__dropdown-menu_results_shops">
-                                    <li class="header__dropdown-menu_results_shops_item">Для пістолетних
-                                        магазинів
-                                    </li>
-                                    <li class="header__dropdown-menu_results_shops_item">Для автоматних
-                                        магазинів
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="header__dropdown-menu-item">
-                                Для гранат
-                            </li>
-                            <li class="header__dropdown-menu-item">
-                                Для рацій
-                            </li>
-                            <li class="header__dropdown-menu-item">
-                                Універсальні
-                            </li>
+            <!--            <ul class="header__menu_body header__menu_font">-->
+            <?php wp_nav_menu(array(
+                'theme_location' => 'top',
+                'container' => false,
+                'items_wrap' => '<ul class="%2$s">%3$s</ul>',
+                'menu_class' => 'header__menu_body header__menu_font',
+            )); ?>
+            <div class="header__dropdown_menu row">
+                <div class=" col-lg-12 col-xl-6">
+                    <ul class=" header__dropdown_menu_list paragraph2">
+                        <li class="header__dropdown-menu-item">
+                            Підсумки для магазинів
+                            <ul class="header__dropdown-menu_results_shops">
+                                <li class="header__dropdown-menu_results_shops_item">Для пістолетних
+                                    магазинів
+                                </li>
+                                <li class="header__dropdown-menu_results_shops_item">Для автоматних
+                                    магазинів
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="header__dropdown-menu-item">
+                            Для гранат
+                        </li>
+                        <li class="header__dropdown-menu-item">
+                            Для рацій
+                        </li>
+                        <li class="header__dropdown-menu-item">
+                            Універсальні
+                        </li>
 
-                        </ul>
-                    </div>
-                    <div class="col-lg-12 col-xl-6">
-                        <ul class="paragraph2">
-                            <li class="header__dropdown-menu-item">
-                                Утилітарні
-                            </li>
-                            <li class="header__dropdown-menu-item">
-                                Пістолетні кобури
-                            </li>
-                            <li class="header__dropdown-menu-item">
-                                Чохол короба ПКМ
-                            </li>
-                            <li class="header__dropdown-menu-item">
-                                Для гідросистеми
-                            </li>
-                            <li class="header__dropdown-menu-item">
-                                Сумка-сухарка
-                            </li>
-                            <li class="header__dropdown-menu-item">
-                                Сумка для скиду магазинів
-                            </li>
-                        </ul>
-                    </div>
+                    </ul>
                 </div>
+                <div class="col-lg-12 col-xl-6">
+                    <ul class="paragraph2">
+                        <li class="header__dropdown-menu-item">
+                            Утилітарні
+                        </li>
+                        <li class="header__dropdown-menu-item">
+                            Пістолетні кобури
+                        </li>
+                        <li class="header__dropdown-menu-item">
+                            Чохол короба ПКМ
+                        </li>
+                        <li class="header__dropdown-menu-item">
+                            Для гідросистеми
+                        </li>
+                        <li class="header__dropdown-menu-item">
+                            Сумка-сухарка
+                        </li>
+                        <li class="header__dropdown-menu-item">
+                            Сумка для скиду магазинів
+                        </li>
+                    </ul>
+                </div>
+            </div>
 
-<!--            </ul>-->
+            <!--            </ul>-->
 
             <ul class="header__menu_buttons d-flex align-items-center">
                 <li class="header__menu_button _icon-search">

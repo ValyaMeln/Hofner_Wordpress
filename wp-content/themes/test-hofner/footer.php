@@ -96,7 +96,7 @@
                             <div class="_icon-icon-phone"></div>
                             <a class="footer__menu_link link_tel" href="tel:<?php the_field('phone-number');?>"><?php the_field('phone');?></a>
                         </div>
-                        <div class="footer__menu_item_text">Пн–Сб, 09:00–19:00</div>
+                        <div class="footer__menu_item_text"><?php the_field('work-schedule'); ?></div>
                     </li>
                     <li class="footer__menu_item_variant paragraph2">
                         <div class="footer__menu_item_phone d-flex ">
@@ -121,8 +121,20 @@
     </div>
     <div class="footer_bottom">
         <div class="footer__container container d-flex justify-content-between align-items-center">
+<!--            <a href="#" class="footer__bottom_logo">-->
+<!--                <img src="--><?php //bloginfo('template_url'); ?><!--/app/img/headerMenu/logo.png" alt="logo footer"/>-->
+<!--            </a>-->
             <a href="#" class="footer__bottom_logo">
-                <img src="<?php bloginfo('template_url'); ?>/app/img/headerMenu/logo.png" alt="logo footer"/>
+                <?php
+                $logo_img = '';
+                if ($custom_logo_id = get_theme_mod('custom_logo')) {
+                    $logo_img = wp_get_attachment_image($custom_logo_id, 'full', false, array(
+                        'class' => '',
+                        'itemprop' => 'logo',
+                    ));
+                }
+                echo $logo_img;
+                ?>
             </a>
             <div class="footer__bottom_cardsAndSocial d-flex align-items-center">
                 <div class="footer__bottom_bank_cards d-flex">

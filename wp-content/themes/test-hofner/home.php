@@ -62,22 +62,17 @@ Template Name: home
                     <svg class="slider__arrow">
                         <use xlink:href="<?php bloginfo('template_url'); ?>/app/img/sprite.svg#arrow-left"></use>
                     </svg>
-                    <!--
-    <div>-->
-                    <!--                    <img src="<?php bloginfo('template_url'); ?>/app/img/slider/arrow-left.svg" alt="prev">-->
-                    <!--                </div>-->
                 </a>
                 <a class="carousel-control-next" href="#carouselExampleControlsSmall" role="button" data-slide="next">
                     <svg class="slider__arrow">
                         <use xlink:href="<?php bloginfo('template_url'); ?>/app/img/sprite.svg#arrow-right"></use>
                     </svg>
-                    <!--                <div>-->
-                    <!--                    <img src="<?php bloginfo('template_url'); ?>/app/img/slider/arrow-right.svg" alt="next">-->
-                    <!--                </div>-->
+
                 </a>
             </div>
         </div>
     </section>
+
     <section class="ourProducts">
         <div class="ourProducts__container container">
             <div class="ourProducts__product row">
@@ -155,7 +150,7 @@ Template Name: home
                                  alt="arrow right">
                         </div>
                     </div>
-                    <h4 class="newDevelopments__all_goods">Усі товари</h4>
+                    <h4 class="newDevelopments__all_goods"><?php the_field('all-goods');?></h4>
                 </div>
             </div>
             <div id="carouselExampleControls2" class="carousel slide" data-iterval="false">
@@ -413,44 +408,29 @@ Template Name: home
         </div>
     </section>
 
-
     <section class="tacticalEquipment paddingTB">
         <div class="tacticalEquipment__container container">
             <div class="tacticalEquipment__row row">
                 <div class="tacticalEquipment__left_text col-12 col-sm-7 col-md-7">
-                    <h2 class="tacticalEquipment__title">ЯКІСНЕ ТАКТИЧНЕ СПОРЯДЖЕННЯ ДЛЯ СПЕЦПІДРОЗДІЛІВ</h2>
-                    <p class="tacticalEquipment__text paragraph3">Наші клієнти – гарант якості. Продукція Hofner, в
-                        першу
-                        чергу,
-                        розрахована для підрозділів спецназу і
-                        військової розвідки. Також, нашу екіпіровку використовують солдати збройних сил України,
-                        прикордонної служби, нацгвардія, добровольчі батальйони, працівники ДСО, морські піхотинці,
-                        військові парамедики і десантники.
+                    <h2 class="tacticalEquipment__title"><?php the_field('title-tactical-equipment');?></h2>
+                    <p class="tacticalEquipment__text paragraph3"><?php the_field('text-tactical-equipment_1');?>
                     </p>
-                    <p class="tacticalEquipment__text paragraph3">Завдання нашого тактичного спорядження – не підвести в
-                        бою
-                        і бути
-                        корисним позаду лінії фронту.
-                        Примітно, що спорядження Hofner користується попитом і на "Великій землі". Крім військових дій,
-                        наше
-                        екіпірування якісно зарекомендувало себе серед страйкболістів та мисливців.
+                    <p class="tacticalEquipment__text paragraph3"><?php the_field('text-tactical-equipment_2');?>
                     </p>
                 </div>
                 <div class="tacticalEquipment__right_transparent d-flex align-items-center justify-content-center col-12 col-sm-5 col-md-5">
-                    <img src="<?php bloginfo('template_url'); ?>/app/img/tacticalEquipment/image_men_right.png"
-                         alt="men"/>
+                    <img src="<?php the_field('img-men-right');?>" alt="men"/>
                 </div>
             </div>
         </div>
     </section>
+
     <section class="ourInstagram paddingTB">
         <div class="ourInstagram__container container">
             <div class="ourInstagram__row row">
                 <div class="ourInstagram__info col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
-                    <h2 class="ourInstagram__title">Ще більше цікавого у нашому Instagram</h2>
-                    <p class="ourInstagram__text paragraph3">Підписуйся на нашу сторінку в Instagram та першим
-                        дізнайвайся про новинки та акції. Також на тебе чекають
-                        огляди популярних товарів, майстер-класи та багато іншого.</p>
+                    <h2 class="ourInstagram__title"><?php the_field('title-our-instagram');?></h2>
+                    <p class="ourInstagram__text paragraph3"><?php the_field('text-info-instagram');?></p>
                     <button class="ourInstagram__btn goTo">
                         перейти до instagram
                     </button>
@@ -460,44 +440,38 @@ Template Name: home
                     <div class="ourInstagram__product row">
                         <div class="ourInstagram__product_column col-4 col-sm-4 col-md-4">
                             <div class="ourInstagram__photo">
-                                <div class="ourInstagram__photo_eml paragraph2">@hofner.ukraine</div>
-                                <img src="<?php bloginfo('template_url'); ?>/app/img/ourInstagram/hofner1.png"
-                                     alt="Фотография 1">
+                                <div class="ourInstagram__photo_eml paragraph2"><?php the_field('our-instagram-eml');?></div>
+                                <img src="<?php the_field('img-hofner1');?>" alt="Фотография 1"/>
                             </div>
                         </div>
                         <div class="ourInstagram__product_column col-4 col-sm-4 col-md-4">
                             <div class="ourInstagram__photo">
-                                <div class="ourInstagram__photo_eml paragraph2">@hofner.ukraine</div>
-                                <img src="<?php bloginfo('template_url'); ?>/app/img/ourInstagram/hofner2.png"
-                                     alt="Фотография 2">
+                                <div class="ourInstagram__photo_eml paragraph2"><?php the_field('our-instagram-eml');?></div>
+                                <img src="<?php the_field('img-hofner2');?>" alt="Фотография 2"/>
                             </div>
                         </div>
                         <div class="ourInstagram__product_column col-4 col-sm-4 col-md-4">
                             <div class="ourInstagram__photo">
-                                <div class="ourInstagram__photo_eml paragraph2">@hofner.ukraine</div>
-                                <img src="<?php bloginfo('template_url'); ?>/app/img/ourInstagram/hofner3.png"
-                                     alt="Фотография 3">
+                                <div class="ourInstagram__photo_eml paragraph2"><?php the_field('our-instagram-eml');?></div>
+                                <img src="<?php the_field('img-hofner3');?>" alt="Фотография 3"/>
                             </div>
                         </div>
                         <div class="ourInstagram__product_column col-4 col-sm-4 col-md-4">
                             <div class="ourInstagram__photo">
-                                <div class="ourInstagram__photo_eml paragraph2">@hofner.ukraine</div>
-                                <img src="<?php bloginfo('template_url'); ?>/app/img/ourInstagram/hofner4.png"
-                                     alt="Фотография 1">
+                                <div class="ourInstagram__photo_eml paragraph2"><?php the_field('our-instagram-eml');?></div>
+                                <img src="<?php the_field('img-hofner4');?>" alt="Фотография 4"/>
                             </div>
                         </div>
                         <div class="ourInstagram__product_column col-4 col-sm-4 col-md-4">
                             <div class="ourInstagram__photo">
-                                <div class="ourInstagram__photo_eml paragraph2">@hofner.ukraine</div>
-                                <img src="<?php bloginfo('template_url'); ?>/app/img/ourInstagram/hofner5.png"
-                                     alt="Фотография 2">
+                                <div class="ourInstagram__photo_eml paragraph2"><?php the_field('our-instagram-eml');?></div>
+                                <img src="<?php the_field('img-hofner5');?>" alt="Фотография 5"/>
                             </div>
                         </div>
                         <div class="ourInstagram__product_column col-4 col-sm-4 col-md-4">
                             <div class="ourInstagram__photo">
-                                <div class="ourInstagram__photo_eml paragraph2">@hofner.ukraine</div>
-                                <img src="<?php bloginfo('template_url'); ?>/app/img/ourInstagram/hofner6.png"
-                                     alt="Фотография 3">
+                                <div class="ourInstagram__photo_eml paragraph2"><?php the_field('our-instagram-eml');?></div>
+                                <img src="<?php the_field('img-hofner6');?>" alt="Фотография 6"/>
                             </div>
                         </div>
                     </div>
@@ -505,20 +479,16 @@ Template Name: home
             </div>
         </div>
     </section>
+
     <section class="productsTested paddingTB">
         <div class="productsTested__container container">
             <div class="productsTested__row row">
                 <div class="productsTested__info col-12 col-sm-12 col-md-5 col-xl-5">
-                    <h2 class="productsTested__title">ВСЯ ПРОДУКЦІЯ ПРОЙШЛА ВИПРОБУВАННЯ В ЗОНІ ООС (АТО)</h2>
-                    <p class="productsTested__text paragraph3">Випробувано залізними людьми в залізних умовах. Наша
-                        продукція розроблена спільно з військовими фахівцями, з огляду на досвід бойових дій на сході
-                        України. Відчула на власній "кордурі" молот і ковадло полігонів. Спочатку вся продукція ретельно
-                        тестується на навчаннях. Наше екіпірування загартована війною. Надійність матеріалів та
-                        зручність
-                        спорядження Hofner поліпшило якість проведення багатьох бойових операцій.</p>
+                    <h2 class="productsTested__title"><?php the_field('title-products-tested');?></h2>
+                    <p class="productsTested__text paragraph3"><?php the_field('text-products-tested');?></p>
                 </div>
                 <div class="productsTested__video col-12 col-sm-12 col-md-7 col-xl-7">
-                    <iframe src="https://www.youtube.com/embed/7JoTakp1w1A"
+                    <iframe src="<?php the_field('link-video');?>"
                             title="" frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen>
@@ -527,92 +497,78 @@ Template Name: home
             </div>
         </div>
     </section>
+
     <section class="ourAdvantages paddingTB">
         <div class="ourAdvantages__container container">
             <div class="ourAdvantages__row row">
                 <div class="ourAdvantages__card col-12 col-sm-6 col-md-4">
                     <div class="ourAdvantages__info has_no_padding item">
-                        <h2 class="ourAdvantages__title">Наші переваги</h2>
+                        <h2 class="ourAdvantages__title"><?php the_field('title-our-advantages');?></h2>
                         <p class="ourAdvantages__info_text paragraph3">
-                            Ми добре знаємо, що від якості виготовленого нами екіпірування залежить чиєсь життя. Наша
-                            головна мета – не допустити того, щоб солдат втратив його.
+                            <?php the_field('text-our-advantages');?>
                         </p>
                     </div>
                 </div>
                 <div class="ourAdvantages__card col-12 col-sm-6 col-md-4">
                     <div class="ourAdvantages__info item">
 
-                        <h3 class="ourAdvantages__info_title design">Дбайливо продумуємо дизайн</h3>
+                        <h3 class="ourAdvantages__info_title design"><?php the_field('text-advantages1');?></h3>
                         <svg class="ourAdvantages__info_icon">
                             <use xlink:href="<?php bloginfo('template_url'); ?>/app/img/sprite.svg#icon_design"></use>
                         </svg>
                         <p class="ourAdvantages__info_text paragraph3">
-                            Наші конструктори здобувають своє натхення " з усіх річок". Ми пильно стежимо за новинками
-                            тактичного спорядження на світовому ринку. Вивчаємо продукцію топових брендів, переймаємо їх
-                            досвід. Кращі розробки провідних армій світу втілені в наших продуктах.
+                            <?php the_field('text-info-advantages1');?>
                         </p>
-                        <button class="ourAdvantages__btn_read_more btn_read_more"> читати більше</button>
+                        <button class="ourAdvantages__btn_read_more btn_read_more"> <?php the_field('btn-read-more');?></button>
                     </div>
                 </div>
                 <div class="ourAdvantages__card col-12 col-sm-6 col-md-4">
                     <div class="ourAdvantages__info item">
-                        <h3 class="ourAdvantages__info_title wish">Враховуємо побажання бійців</h3>
+                        <h3 class="ourAdvantages__info_title wish"><?php the_field('text-advantages2');?></h3>
                         <svg class="ourAdvantages__info_icon">
                             <use xlink:href="<?php bloginfo('template_url'); ?>/app/img/sprite.svg#icon-talk"></use>
                         </svg>
                         <p class="ourAdvantages__info_text paragraph3">
-                            У розробці може взяти участь будь-який клієнт. Чому? Те, що помітили ви, могли не побачити
-                            ми.
-                            Солдат із бойовим досвідом, що випробував на собі безліч видів тактичного спорядження точно
-                            знає, що оптимально підходить для ведення бойових дій.
+                            <?php the_field('text-info-advantages2');?>
                         </p>
-                        <button class="ourAdvantages__btn_read_more btn_read_more"> читати більше</button>
+                        <button class="ourAdvantages__btn_read_more btn_read_more"> <?php the_field('btn-read-more');?></button>
                     </div>
                 </div>
                 <div class="ourAdvantages__card col-12 col-sm-6 col-md-4">
                     <div class="ourAdvantages__info item">
-                        <h3 class="ourAdvantages__info_title quality">Наша ціль – найвища якість!</h3>
+                        <h3 class="ourAdvantages__info_title quality"><?php the_field('text-advantages3');?></h3>
                         <svg class="ourAdvantages__info_icon">
                             <use xlink:href="<?php bloginfo('template_url'); ?>/app/img/sprite.svg#icon-target"></use>
                         </svg>
                         <p class="ourAdvantages__info_text paragraph3">
-                            Ми добре знаємо, що від якості виготовленого нами екіпірування залежить чиєсь життя. Наша
-                            головна мета - не допустити того, щоб солдат втратив його. А це також залежить від
-                            надійності
-                            спорядження. Від вас ми вимагаємо тільки успішного виконання бойових завдань.
+                            <?php the_field('text-info-advantages3');?>
                         </p>
-                        <button class="ourAdvantages__btn_read_more btn_read_more"> читати більше</button>
+                        <button class="ourAdvantages__btn_read_more btn_read_more"> <?php the_field('btn-read-more');?></button>
                     </div>
                 </div>
                 <div class="ourAdvantages__card col-12 col-sm-6 col-md-4">
                     <div class="ourAdvantages__info item">
-                        <h3 class="ourAdvantages__info_title cloth">Оригінальна тканина і фурнітура</h3>
+                        <h3 class="ourAdvantages__info_title cloth"><?php the_field('text-advantages4');?></h3>
                         <svg class="ourAdvantages__info_icon">
                             <use xlink:href="<?php bloginfo('template_url'); ?>/app/img/sprite.svg#icon-textile"></use>
                         </svg>
                         <p class="ourAdvantages__info_text paragraph3">
-                            Безсумнівно, ціна замінника дешевша. Але ми, в першу чергу, цінуємо життя наших клієнтів,
-                            яке
-                            залежить від якості екіпірування. Тріснутий фастекс або армована нитка китайського
-                            виробництва,
-                            можуть призвести до сумних наслідків під час бою.
+                            <?php the_field('text-info-advantages4');?>
                         </p>
-                        <button class="ourAdvantages__btn_read_more btn_read_more btn_read_more__cloth"> читати більше
+                        <button class="ourAdvantages__btn_read_more btn_read_more btn_read_more__cloth"> <?php the_field('btn-read-more');?>
                         </button>
                     </div>
                 </div>
                 <div class="ourAdvantages__card col-12 col-sm-6 col-md-4">
                     <div class="ourAdvantages__info item">
-                        <h3 class="ourAdvantages__info_title delivery">Доставка по україні та закордон</h3>
+                        <h3 class="ourAdvantages__info_title delivery"><?php the_field('text-advantages5');?></h3>
                         <svg class="ourAdvantages__info_icon">
                             <use xlink:href="<?php bloginfo('template_url'); ?>/app/img/sprite.svg#icon-earth"></use>
                         </svg>
                         <p class="ourAdvantages__info_text paragraph3">
-                            Якщо якість - наш коник, то сервіс відповідає. Доставимо куди завгодно. Працюємо як з
-                            вітчизняними, так і з закордонними службами доставки. В основному, щоб уникнути переплат, ми
-                            працюємо з національним перевізником «Укрпошта», який доставляє не тільки по...
+                            <?php the_field('text-info-advantages5');?>
                         </p>
-                        <button class="ourAdvantages__btn_read_more btn_read_more delivery"> читати більше</button>
+                        <button class="ourAdvantages__btn_read_more btn_read_more delivery"> <?php the_field('btn-read-more');?></button>
                     </div>
                 </div>
             </div>
@@ -620,29 +576,22 @@ Template Name: home
     </section>
     <div class="modal__ourAdvantages__btn_read_more">
         <div class="modal__ourAdvantages_content">
-            <h3 class="ourAdvantages__info_title cloth">Оригінальна тканина і фурнітура</h3>
-            <button class="modal__close btn_read_more">Закрити</button>
+            <h3 class="ourAdvantages__info_title cloth"><?php the_field('text-advantages4');?></h3>
+            <button class="modal__close btn_read_more"><?php the_field('modal-close');?></button>
             <div class="modal__ourAdvantages_content_text row">
                 <div class=" col-12 col-sm-6 col-md-6">
                     <p class="ourAdvantages__info_text paragraph3">
-                        Безсумнівно, ціна замінника дешевша. Але ми, в першу чергу, цінуємо життя наших клієнтів, яке
-                        залежить від якості екіпірування. Тріснутий фастекс або армована нитка китайського виробництва,
-                        можуть призвести до сумних наслідків під час бою.
+                        <?php the_field('text-info-advantages4');?>
                     </p>
                 </div>
                 <div class=" col-12 col-sm-6 col-md-6">
                     <p class="ourAdvantages__info_text paragraph3">
-                        Фурнітура (люверси, фастекси, липучки) тільки YKK та 2M. Ніяких замінників чи підробок. Пластик,
-                        який використовується у фастексах YKK та 2M можливо вбити, напевно, тільки прямим попаданням
-                        кулі. А зчеплення липучок між собою можна порівняти з швами інверторного зварювання.
+                        <?php the_field('text-info-advantages4-2');?>
                     </p>
                 </div>
                 <div class=" col-12 col-sm-6 col-md-6">
                     <p class="ourAdvantages__info_text paragraph3">
-                        У виробництві ми використовуємо матеріали Cordura, поліамідні тканини з США, Європи та Південної
-                        Кореї. Про переваги матеріалу Cordura - поліамідної тканини з щільністю близько 100-1000 ден
-                        можна говорити довго. Потрібні гарантії? Спорядження збройних сил США - яскравий приклад якості
-                        і надійності.
+                        <?php the_field('text-info-advantages4-3');?>
                     </p>
                 </div>
 
