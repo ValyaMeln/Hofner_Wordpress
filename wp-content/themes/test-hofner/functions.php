@@ -8,10 +8,10 @@ add_action('wp_enqueue_scripts', function () {
 
     wp_enqueue_style('style-gulp', get_template_directory_uri() . '/app/css/main.min.css');
 
-    wp_deregister_script('jquery');
-    wp_register_script('jquery', 'https://code.jquery.com/jquery-3.6.0.min.js');
-
-    wp_enqueue_script('jquery');
+//    wp_deregister_script('jquery');
+//    wp_register_script('jquery', 'https://code.jquery.com/jquery-3.6.0.min.js');
+//
+//    wp_enqueue_script('jquery');
     wp_enqueue_script('bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js', array('jquery'), '', true);
     wp_enqueue_script('main', get_template_directory_uri() . '/app/js/main.js', '', 'null', true);
 
@@ -91,6 +91,14 @@ function filter_nav_menu_css_classes( $classes, $item, $args, $depth)
 add_filter('nav_menu_submenu_css_class', 'filter_nav_menu_submenu_css_class', 10, 3);
 function filter_nav_menu_submenu_css_class($classes, $args, $depth)
 {
+//if ($depth == 2) {
+//    $classes = 'header__dropdown_menu"';
+//}
+//else {
+//    $classes = ' row"';
+//}
+
+//    $output .= $indent . '<li' . $classes . '>';
    if ($args->theme_location === 'top') {
         $classes = [
             'header__dropdown_menu',
@@ -98,11 +106,30 @@ function filter_nav_menu_submenu_css_class($classes, $args, $depth)
         ];
 
      } else{
-
+       $classes = [
+           $depth[3],
+           'header__dropdown-menu_results_shops',
+       ];
    }
 
     return $classes;
 }
+//add_filter('nav_menu_submenu_css_class', 'filter_nav_menu_submenu_css_class', 10, 3);
+//function filter_nav_menu_submenu_css_class($classes, $args, $depth)
+//{
+//    if ($args->theme_location === 'top') {
+//    $depth ===[1] ;
+//        $classes = [
+//            'header__dropdown_menu',
+//            'row'
+//        ];
+//
+//    } else{
+//
+//    }
+//
+//    return $classes;
+//}
 
 //Добавляю класи силкам
 //add_filter('nav_menu_link_attributes', 'filter_nav_menu_link_attributes', 10, 4);

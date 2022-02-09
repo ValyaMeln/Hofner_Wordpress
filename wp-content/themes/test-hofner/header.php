@@ -1,3 +1,4 @@
+<?php the_content (); ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
@@ -24,9 +25,12 @@
     <!--    <link rel="stylesheet" href="css/main.min.css">-->
 </head>
 <body>
+<?php
+//echo do_shortcode('[smartslider3 slider="2"]');
+//?>
+
 
 <header class="header">
-
     <div class="header__information">
         <div class="container d-flex justify-content-between">
             <div class="d-flex align-items-center">

@@ -1,3 +1,4 @@
+<?php the_content(); ?>
 <?php
 /*
 Template Name: home
@@ -9,36 +10,37 @@ Template Name: home
 <?php get_header(); ?>
 
     <section class="slider">
+        <?php $reviews = get_field('bg-img-slider'); ?>
         <a href="#" class="slider__button_link">Переглянути новинки</a>
         <div id="carouselExampleControls" class="carouselExampleControls carousel slide" data-iterval="false">
             <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img class="d-block w-100"
-                         src="<?php bloginfo('template_url'); ?>/app/img/slider/hofner-banner1.png" alt="Первый слайд">
-                </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100"
-                         src="<?php bloginfo('template_url'); ?>/app/img/slider/hofner-banner2.png" alt="Второй слайд">
-                </div>
+
+                <?php foreach ($reviews as $review) : ?>
+                    <div class="carousel-item active">
+
+                        <img class="d-block w-100"
+                             src="<?= wp_get_attachment_url($review['photo-background']); ?>" alt="Первый слайд">
+
+                    </div>
+                <?php endforeach; ?>
+                <!--                <div class="carousel-item">-->
+                <!--                    <img class="d-block w-100"-->
+                <!--                         src="-->
+                <!--                -->
+                <?php //bloginfo('template_url'); ?><!--/app/img/slider/hofner-banner2.png" alt="Второй слайд">-->
+                <!--                </div>-->
             </div>
             <div class="container">
                 <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-
-                    <!--                <div>-->
                     <svg class="slider__arrow">
                         <use xlink:href="<?php bloginfo('template_url'); ?>/app/img/sprite.svg#arrow-left"></use>
                     </svg>
-                    <!--                                    <img src="<?php bloginfo('template_url'); ?>/app/img/slider/arrow-left.svg" alt="prev">-->
-                    <!--                </div>-->
                 </a>
                 <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
                     <svg class="slider__arrow">
                         <use xlink:href="<?php bloginfo('template_url'); ?>/app/img/sprite.svg#arrow-right"></use>
                     </svg>
 
-                    <!--                <div>-->
-                    <!--                    <img src="<?php bloginfo('template_url'); ?>/app/img/slider/arrow-right.svg" alt="next">-->
-                    <!--                </div>-->
                 </a>
             </div>
         </div>
@@ -78,57 +80,26 @@ Template Name: home
             <div class="ourProducts__product row">
                 <div class="ourProducts__product_column col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4">
                     <div class="ourProducts__product_item has_no_padding item">
-                        <h2 class="ourProducts__title"><?php the_field('title-our-goods');?></h2>
+                        <h2 class="ourProducts__title"><?php the_field('title-our-goods'); ?></h2>
                         <p class="ourProducts__product_text">
-                            <?php the_field('subtitle -our-goods');?>
+                            <?php the_field('subtitle -our-goods'); ?>
                         </p>
                     </div>
                 </div>
-                <div class="ourProducts__product_column col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4">
-                    <div class="ourProducts__product_item ourProducts__clothing item">
-                        <h5 class="ourProducts__product_choose choose"><?php the_field('choose');?></h5>
-                        <h2 class="ourProducts__product_title">
-                            <?php the_field('clothing-category');?>
-                        </h2>
-                        <a class="ourProducts__product_all_goods _icon-Vector-3" href="#"><?php the_field('all-goods');?></a>
+                <?php $reviews = get_field('cards-our-products'); ?>
+                <?php foreach ($reviews as $review) : ?>
+                    <div class="ourProducts__product_column col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                        <div class="ourProducts__product_item  ourProducts__clothing item"
+                             style="background-image: url('<?= wp_get_attachment_url($review['photo-bg-card']); ?>')">
+                            <h5 class="ourProducts__product_choose choose"><?= $review['product-choose']; ?></h5>
+                            <h2 class="ourProducts__product_title">
+                                <?= $review['product-name']; ?>
+                            </h2>
+                            <a class="ourProducts__product_all_goods _icon-Vector-3"
+                               href="#"><?= $review['btn-all-produkts']; ?></a>
+                        </div>
                     </div>
-                </div>
-                <div class="ourProducts__product_column col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4">
-                    <div class="ourProducts__product_item ourProducts__medicine item">
-                        <h5 class="ourProducts__product_choose choose"><?php the_field('choose');?></h5>
-                        <h2 class="ourProducts__product_title">
-                            <?php the_field('medicine-category');?>
-                        </h2>
-                        <a class="ourProducts__product_all_goods _icon-Vector-3" href="#"><?php the_field('all-goods');?></a>
-                    </div>
-                </div>
-                <div class="ourProducts__product_column col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4">
-                    <div class="ourProducts__product_item ourProducts__results item">
-                        <h5 class="ourProducts__product_choose choose"><?php the_field('choose');?></h5>
-                        <h2 class="ourProducts__product_title">
-                            <?php the_field('pouch-category');?>
-                        </h2>
-                        <a class="ourProducts__product_all_goods _icon-Vector-3" href="#"><?php the_field('all-goods');?></a>
-                    </div>
-                </div>
-                <div class="ourProducts__product_column col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4">
-                    <div class="ourProducts__product_item ourProducts__backpacks item">
-                        <h5 class="ourProducts__product_choose choose"><?php the_field('choose');?></h5>
-                        <h2 class="ourProducts__product_title">
-                            <?php the_field('backpack-category');?>
-                        </h2>
-                        <a class="ourProducts__product_all_goods _icon-Vector-3" href="#"><?php the_field('all-goods');?></a>
-                    </div>
-                </div>
-                <div class="ourProducts__product_column col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4">
-                    <div class="ourProducts__product_item ourProducts__unloading item">
-                        <h5 class="ourProducts__product_choose choose"><?php the_field('choose');?></h5>
-                        <h2 class="ourProducts__product_title _icon-user_letter path2">
-                            <?php the_field('unloading-category');?>
-                        </h2>
-                        <a class="ourProducts__product_all_goods _icon-Vector-3" href="#"><?php the_field('all-goods');?></a>
-                    </div>
-                </div>
+                <?php endforeach; ?>
             </div>
         </div>
     </section>
@@ -150,7 +121,7 @@ Template Name: home
                                  alt="arrow right">
                         </div>
                     </div>
-                    <h4 class="newDevelopments__all_goods"><?php the_field('all-goods');?></h4>
+                    <h4 class="newDevelopments__all_goods"><?php the_field('all-goods'); ?></h4>
                 </div>
             </div>
             <div id="carouselExampleControls2" class="carousel slide" data-iterval="false">
@@ -412,14 +383,14 @@ Template Name: home
         <div class="tacticalEquipment__container container">
             <div class="tacticalEquipment__row row">
                 <div class="tacticalEquipment__left_text col-12 col-sm-7 col-md-7">
-                    <h2 class="tacticalEquipment__title"><?php the_field('title-tactical-equipment');?></h2>
-                    <p class="tacticalEquipment__text paragraph3"><?php the_field('text-tactical-equipment_1');?>
+                    <h2 class="tacticalEquipment__title"><?php the_field('title-tactical-equipment'); ?></h2>
+                    <p class="tacticalEquipment__text paragraph3"><?php the_field('text-tactical-equipment_1'); ?>
                     </p>
-                    <p class="tacticalEquipment__text paragraph3"><?php the_field('text-tactical-equipment_2');?>
+                    <p class="tacticalEquipment__text paragraph3"><?php the_field('text-tactical-equipment_2'); ?>
                     </p>
                 </div>
                 <div class="tacticalEquipment__right_transparent d-flex align-items-center justify-content-center col-12 col-sm-5 col-md-5">
-                    <img src="<?php the_field('img-men-right');?>" alt="men"/>
+                    <img src="<?php the_field('img-men-right'); ?>" alt="men"/>
                 </div>
             </div>
         </div>
@@ -429,8 +400,8 @@ Template Name: home
         <div class="ourInstagram__container container">
             <div class="ourInstagram__row row">
                 <div class="ourInstagram__info col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
-                    <h2 class="ourInstagram__title"><?php the_field('title-our-instagram');?></h2>
-                    <p class="ourInstagram__text paragraph3"><?php the_field('text-info-instagram');?></p>
+                    <h2 class="ourInstagram__title"><?php the_field('title-our-instagram'); ?></h2>
+                    <p class="ourInstagram__text paragraph3"><?php the_field('text-info-instagram'); ?></p>
                     <button class="ourInstagram__btn goTo">
                         перейти до instagram
                     </button>
@@ -438,42 +409,17 @@ Template Name: home
 
                 <div class="ourInstagram__photos col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8">
                     <div class="ourInstagram__product row">
-                        <div class="ourInstagram__product_column col-4 col-sm-4 col-md-4">
-                            <div class="ourInstagram__photo">
-                                <div class="ourInstagram__photo_eml paragraph2"><?php the_field('our-instagram-eml');?></div>
-                                <img src="<?php the_field('img-hofner1');?>" alt="Фотография 1"/>
+                        <?php $reviews = get_field('cards_instagram'); ?>
+                        <?php foreach ($reviews as $review) : ?>
+                            <div class="ourInstagram__product_column col-4 col-sm-4 col-md-4">
+                                <div class="ourInstagram__photo">
+                                    <div class="ourInstagram__photo_eml paragraph2"><?= $review['link-instagram']; ?></div>
+                                    <img src="<?= wp_get_attachment_url($review['photo-instagram']); ?>"
+                                         alt="Фотография 1"/>
+                                </div>
                             </div>
-                        </div>
-                        <div class="ourInstagram__product_column col-4 col-sm-4 col-md-4">
-                            <div class="ourInstagram__photo">
-                                <div class="ourInstagram__photo_eml paragraph2"><?php the_field('our-instagram-eml');?></div>
-                                <img src="<?php the_field('img-hofner2');?>" alt="Фотография 2"/>
-                            </div>
-                        </div>
-                        <div class="ourInstagram__product_column col-4 col-sm-4 col-md-4">
-                            <div class="ourInstagram__photo">
-                                <div class="ourInstagram__photo_eml paragraph2"><?php the_field('our-instagram-eml');?></div>
-                                <img src="<?php the_field('img-hofner3');?>" alt="Фотография 3"/>
-                            </div>
-                        </div>
-                        <div class="ourInstagram__product_column col-4 col-sm-4 col-md-4">
-                            <div class="ourInstagram__photo">
-                                <div class="ourInstagram__photo_eml paragraph2"><?php the_field('our-instagram-eml');?></div>
-                                <img src="<?php the_field('img-hofner4');?>" alt="Фотография 4"/>
-                            </div>
-                        </div>
-                        <div class="ourInstagram__product_column col-4 col-sm-4 col-md-4">
-                            <div class="ourInstagram__photo">
-                                <div class="ourInstagram__photo_eml paragraph2"><?php the_field('our-instagram-eml');?></div>
-                                <img src="<?php the_field('img-hofner5');?>" alt="Фотография 5"/>
-                            </div>
-                        </div>
-                        <div class="ourInstagram__product_column col-4 col-sm-4 col-md-4">
-                            <div class="ourInstagram__photo">
-                                <div class="ourInstagram__photo_eml paragraph2"><?php the_field('our-instagram-eml');?></div>
-                                <img src="<?php the_field('img-hofner6');?>" alt="Фотография 6"/>
-                            </div>
-                        </div>
+                        <?php endforeach; ?>
+
                     </div>
                 </div>
             </div>
@@ -484,11 +430,11 @@ Template Name: home
         <div class="productsTested__container container">
             <div class="productsTested__row row">
                 <div class="productsTested__info col-12 col-sm-12 col-md-5 col-xl-5">
-                    <h2 class="productsTested__title"><?php the_field('title-products-tested');?></h2>
-                    <p class="productsTested__text paragraph3"><?php the_field('text-products-tested');?></p>
+                    <h2 class="productsTested__title"><?php the_field('title-products-tested'); ?></h2>
+                    <p class="productsTested__text paragraph3"><?php the_field('text-products-tested'); ?></p>
                 </div>
                 <div class="productsTested__video col-12 col-sm-12 col-md-7 col-xl-7">
-                    <iframe src="<?php the_field('link-video');?>"
+                    <iframe src="<?php the_field('link-video'); ?>"
                             title="" frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen>
@@ -503,95 +449,66 @@ Template Name: home
             <div class="ourAdvantages__row row">
                 <div class="ourAdvantages__card col-12 col-sm-6 col-md-4">
                     <div class="ourAdvantages__info has_no_padding item">
-                        <h2 class="ourAdvantages__title"><?php the_field('title-our-advantages');?></h2>
+                        <h2 class="ourAdvantages__title"><?php the_field('title-our-advantages'); ?></h2>
                         <p class="ourAdvantages__info_text paragraph3">
-                            <?php the_field('text-our-advantages');?>
+                            <?php the_field('text-our-advantages'); ?>
                         </p>
                     </div>
                 </div>
-                <div class="ourAdvantages__card col-12 col-sm-6 col-md-4">
-                    <div class="ourAdvantages__info item">
 
-                        <h3 class="ourAdvantages__info_title design"><?php the_field('text-advantages1');?></h3>
-                        <svg class="ourAdvantages__info_icon">
-                            <use xlink:href="<?php bloginfo('template_url'); ?>/app/img/sprite.svg#icon_design"></use>
-                        </svg>
-                        <p class="ourAdvantages__info_text paragraph3">
-                            <?php the_field('text-info-advantages1');?>
-                        </p>
-                        <button class="ourAdvantages__btn_read_more btn_read_more"> <?php the_field('btn-read-more');?></button>
+                <?php $reviews = get_field('cards-our-advantages'); ?>
+                <?php foreach ($reviews as $review) : ?>
+                    <div class="ourAdvantages__card col-12 col-sm-6 col-md-4">
+                        <div class="ourAdvantages__info item">
+
+                            <h3 class="ourAdvantages__info_title design"><?= $review['title-card']; ?></h3>
+                            <img class="ourAdvantages__info_icon" src="<?= wp_get_attachment_url($review['svg_icon']); ?>"
+                                 alt="Фотография 1"/>
+
+                            <p class="ourAdvantages__info_text paragraph3">
+                                <?= $review['info-text']; ?>
+                            </p>
+                            <button class="ourAdvantages__btn_read_more btn_read_more"> <?= $review['btn-text']; ?></button>
+                        </div>
                     </div>
-                </div>
+                <?php endforeach; ?>
+
+
                 <div class="ourAdvantages__card col-12 col-sm-6 col-md-4">
                     <div class="ourAdvantages__info item">
-                        <h3 class="ourAdvantages__info_title wish"><?php the_field('text-advantages2');?></h3>
-                        <svg class="ourAdvantages__info_icon">
-                            <use xlink:href="<?php bloginfo('template_url'); ?>/app/img/sprite.svg#icon-talk"></use>
-                        </svg>
-                        <p class="ourAdvantages__info_text paragraph3">
-                            <?php the_field('text-info-advantages2');?>
-                        </p>
-                        <button class="ourAdvantages__btn_read_more btn_read_more"> <?php the_field('btn-read-more');?></button>
-                    </div>
-                </div>
-                <div class="ourAdvantages__card col-12 col-sm-6 col-md-4">
-                    <div class="ourAdvantages__info item">
-                        <h3 class="ourAdvantages__info_title quality"><?php the_field('text-advantages3');?></h3>
-                        <svg class="ourAdvantages__info_icon">
-                            <use xlink:href="<?php bloginfo('template_url'); ?>/app/img/sprite.svg#icon-target"></use>
-                        </svg>
-                        <p class="ourAdvantages__info_text paragraph3">
-                            <?php the_field('text-info-advantages3');?>
-                        </p>
-                        <button class="ourAdvantages__btn_read_more btn_read_more"> <?php the_field('btn-read-more');?></button>
-                    </div>
-                </div>
-                <div class="ourAdvantages__card col-12 col-sm-6 col-md-4">
-                    <div class="ourAdvantages__info item">
-                        <h3 class="ourAdvantages__info_title cloth"><?php the_field('text-advantages4');?></h3>
+                        <h3 class="ourAdvantages__info_title cloth"><?php the_field('text-advantages4'); ?></h3>
                         <svg class="ourAdvantages__info_icon">
                             <use xlink:href="<?php bloginfo('template_url'); ?>/app/img/sprite.svg#icon-textile"></use>
                         </svg>
                         <p class="ourAdvantages__info_text paragraph3">
-                            <?php the_field('text-info-advantages4');?>
+                            <?php the_field('text-info-advantages4'); ?>
                         </p>
-                        <button class="ourAdvantages__btn_read_more btn_read_more btn_read_more__cloth"> <?php the_field('btn-read-more');?>
+                        <button class="ourAdvantages__btn_read_more btn_read_more btn_read_more__cloth"> <?php the_field('btn-read-more'); ?>
                         </button>
                     </div>
                 </div>
-                <div class="ourAdvantages__card col-12 col-sm-6 col-md-4">
-                    <div class="ourAdvantages__info item">
-                        <h3 class="ourAdvantages__info_title delivery"><?php the_field('text-advantages5');?></h3>
-                        <svg class="ourAdvantages__info_icon">
-                            <use xlink:href="<?php bloginfo('template_url'); ?>/app/img/sprite.svg#icon-earth"></use>
-                        </svg>
-                        <p class="ourAdvantages__info_text paragraph3">
-                            <?php the_field('text-info-advantages5');?>
-                        </p>
-                        <button class="ourAdvantages__btn_read_more btn_read_more delivery"> <?php the_field('btn-read-more');?></button>
-                    </div>
-                </div>
+                
             </div>
         </div>
     </section>
     <div class="modal__ourAdvantages__btn_read_more">
         <div class="modal__ourAdvantages_content">
-            <h3 class="ourAdvantages__info_title cloth"><?php the_field('text-advantages4');?></h3>
-            <button class="modal__close btn_read_more"><?php the_field('modal-close');?></button>
+            <h3 class="ourAdvantages__info_title cloth"><?php the_field('text-advantages4'); ?></h3>
+            <button class="modal__close btn_read_more"><?php the_field('modal-close'); ?></button>
             <div class="modal__ourAdvantages_content_text row">
                 <div class=" col-12 col-sm-6 col-md-6">
                     <p class="ourAdvantages__info_text paragraph3">
-                        <?php the_field('text-info-advantages4');?>
+                        <?php the_field('text-info-advantages4'); ?>
                     </p>
                 </div>
                 <div class=" col-12 col-sm-6 col-md-6">
                     <p class="ourAdvantages__info_text paragraph3">
-                        <?php the_field('text-info-advantages4-2');?>
+                        <?php the_field('text-info-advantages4-2'); ?>
                     </p>
                 </div>
                 <div class=" col-12 col-sm-6 col-md-6">
                     <p class="ourAdvantages__info_text paragraph3">
-                        <?php the_field('text-info-advantages4-3');?>
+                        <?php the_field('text-info-advantages4-3'); ?>
                     </p>
                 </div>
 

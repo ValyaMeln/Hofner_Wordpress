@@ -421,27 +421,31 @@ img {
   &__product_item {
     padding: 40px;
     height: 100%;
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
-  &__clothing {
-    background: url('../img/ourProducts/Clothing.png') 100% 100%/cover no-repeat;
-  }
+  //&__clothing {
+  //  background-image: url('../img/ourProducts/Clothing.png');
+  //}
 
-  &__medicine {
-    background: url('../img/ourProducts/Medicine.png') 100% 100%/cover no-repeat;
-  }
-
-  &__results {
-    background: url('../img/ourProducts/Results.png') 100% 100%/cover no-repeat;
-  }
-
-  &__backpacks {
-    background: url('../img/ourProducts/Backpacks .png') 100% 100%/cover no-repeat;
-  }
-
-  &__unloading {
-    background: url('../img/ourProducts/Loading.png') 100% 100%/cover no-repeat;
-  }
+  //&__medicine {
+  //  background-image: url('../img/ourProducts/Medicine.png');
+  //}
+  //
+  //&__results {
+  //  background-image: url('../img/ourProducts/Results.png');
+  //}
+  //
+  //&__backpacks {
+  //  background-image: url('../img/ourProducts/Backpacks .png');
+  //}
+  //
+  //&__unloading {
+  //  background-image: url('../img/ourProducts/Loading.png');
+  //  //background-image: url('../img/ourProducts/Loading.png') 100% 100%/cover no-repeat;
+  //}
 }
 
 ._icon-arrows_all_goods::after {
@@ -758,6 +762,14 @@ img {
 
 .footer__menu_item_phone {
   cursor: pointer;
+  position: relative;
+  //&::before{
+  //  content: "";
+  //  position: absolute;
+  //  width: 24px;
+  //  height: 24px;
+  //  background-image: url("../img/footer/icon-phone.svg");
+  //}
 }
 
 ._icon-icon-phone,
