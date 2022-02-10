@@ -107,11 +107,32 @@
                         <div class="footer__menu_item_text">Електронна адреса</div>
                     </li>
                 </ul>
-                <form class="footer__subscription">
-                    <h4 class="footer__subscription_title">Підписка на новини та акції</h4>
-                    <?php echo do_shortcode('[contact-form-7 id="57" title="Контактна форма"]'); ?>
+<!--                <form class="footer__subscription">-->
+<!--                    <h4 class="footer__subscription_title">Підписка на новини та акції</h4>-->
+<!--                    --><?php //echo do_shortcode('[contact-form-7 id="57" title="Контактна форма"]'); ?>
+<!---->
+<!--                </form>-->
+<!--                <form action="">-->
+                    <form class="footer__subscription">
+                        <h4 class="footer__subscription_title">Підписка на новини та акції</h4>
+                        <div class="footer__subscription_wrapper_inp">
+                            <input class="inp paragraph2" spellcheck="false" type="text" name="name" id="callback-name"/>
+                            <label for="callback-name" class="label paragraph2">Name</label>
+                        </div>
+                        <div class="footer__subscription_wrapper_inp">
+                            <input class="inp paragraph2" spellcheck="false" type="text" name="email" id="callback-email"/>
+                            <label for="callback-email" class="label paragraph2">E-mail</label>
+                        </div>
 
-                </form>
+<!--                        <button class="footer__subscription_btn goTo">-->
+<!--                            ОФОРМИТИ ПІДПИСКУ-->
+<!--                        </button>-->
+                        <div class="">
+                            <input type="submit" class="goTo footer__subscription_btn" value="ОФОРМИТИ ПІДПИСКУ">
+                        </div>
+
+                    </form>
+<!--                </form>-->
             </div>
             <a class="footer__btn_go_up_small" href="#">
                 <svg class="footer__go_up_small">

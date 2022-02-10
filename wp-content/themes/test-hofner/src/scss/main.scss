@@ -804,7 +804,24 @@ img {
   position: relative;
   margin-bottom: 10px;
 }
+.footer__subscription_wrapper_inp input.error{
+  border: 1px solid red;
+  box-shadow: 3px 10px 36px 0px rgba(232,25,25,0.75);
+  -webkit-box-shadow: 3px 10px 36px 0px rgba(232,25,25,0.75);
+  -moz-box-shadow: 3px 10px 36px 0px rgba(232,25,25,0.75);
+}
+.footer__subscription_wrapper_inp span.error {
+  display: block;
+  position: absolute;
+  top: -webkit-calc(15% + 10px);
+  top: calc(15% + 10px);
+  right: 20px;
+  //left: 10px;
+  color: #f80d0d;
+  font-size: 17px;
+  line-height: 20px;
 
+}
 .label {
   position: absolute;
   top: 45%;
