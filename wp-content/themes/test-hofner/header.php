@@ -31,19 +31,20 @@
 
 
 <header class="header">
+<!--    <div>--><?php //the_field('title', options);?><!--</div>-->
     <div class="header__information">
         <div class="container d-flex justify-content-between">
             <div class="d-flex align-items-center">
                 <div class="header__information_workSchedule">
-                    <?php the_field('work-schedule'); ?>
+                    <?php the_field('work-schedule',options); ?>
                 </div>
                 <a class="header_information_phone"
-                   href="tel:<?php the_field('phone-number'); ?>"><?php the_field('phone'); ?></a>
+                   href="tel:<?php the_field('phone-number', options); ?>"><?php the_field('phone',options); ?></a>
             </div>
             <div class="d-flex">
                 <div class="header__selects">
                     <div class="header__select_language">
-                        <button class="header__select_btn_language"><?php the_field('language'); ?></button>
+                        <button class="header__select_btn_language"><?php the_field('language',options); ?></button>
                         <ul class="list_languages">
                             <li class="list_languages_item">УКРАЇНСЬКА</li>
                             <li class="list_languages_item">РУССКИЙ</li>
@@ -53,7 +54,7 @@
                 </div>
                 <div class="header__selects">
                     <div class="header__select_currency">
-                        <button class="header__select_btn_currency"><?php the_field('currency'); ?></button>
+                        <button class="header__select_btn_currency"><?php the_field('currency',options); ?></button>
                         <ul class="list_currency">
                             <li class="list_languages_item">Uah (₴)</li>
                             <li class="list_languages_item">eur (€)</li>

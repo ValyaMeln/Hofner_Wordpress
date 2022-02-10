@@ -10,25 +10,34 @@ Template Name: home
 <?php get_header(); ?>
 
     <section class="slider">
-        <?php $reviews = get_field('bg-img-slider'); ?>
         <a href="#" class="slider__button_link">Переглянути новинки</a>
         <div id="carouselExampleControls" class="carouselExampleControls carousel slide" data-iterval="false">
             <div class="carousel-inner">
-
+                <?php $reviews = get_field('bg-img-slider',5); ?>
+<!--                        <pre> --><?php //var_dump($reviews); ?><!--</pre>-->
                 <?php foreach ($reviews as $review) : ?>
                     <div class="carousel-item active">
-
                         <img class="d-block w-100"
-                             src="<?= wp_get_attachment_url($review['photo-background']); ?>" alt="Первый слайд">
-
+                             src="<?= wp_get_attachment_url($review['photo-background']); ?>" alt="Второй слайд">
                     </div>
                 <?php endforeach; ?>
-                <!--                <div class="carousel-item">-->
-                <!--                    <img class="d-block w-100"-->
-                <!--                         src="-->
-                <!--                -->
-                <?php //bloginfo('template_url'); ?><!--/app/img/slider/hofner-banner2.png" alt="Второй слайд">-->
-                <!--                </div>-->
+
+<!--                --><?php //global $review;
+//                $reviews = get_field('bg-img-slider');
+//
+//                if ($reviews) {
+//                    foreach ($reviews as $review) {
+//                        setup_postdata($review); ?>
+<!---->
+<!--                        <div class="carousel-item ">-->
+<!---->
+<!--                        </div>-->
+<!---->
+<!--                    --><?php //}
+//                }
+//                                wp_reset_postdata();
+//                ?>
+
             </div>
             <div class="container">
                 <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -462,7 +471,8 @@ Template Name: home
                         <div class="ourAdvantages__info item">
 
                             <h3 class="ourAdvantages__info_title design"><?= $review['title-card']; ?></h3>
-                            <img class="ourAdvantages__info_icon" src="<?= wp_get_attachment_url($review['svg_icon']); ?>"
+                            <img class="ourAdvantages__info_icon"
+                                 src="<?= wp_get_attachment_url($review['svg_icon']); ?>"
                                  alt="Фотография 1"/>
 
                             <p class="ourAdvantages__info_text paragraph3">
@@ -487,7 +497,7 @@ Template Name: home
                         </button>
                     </div>
                 </div>
-                
+
             </div>
         </div>
     </section>

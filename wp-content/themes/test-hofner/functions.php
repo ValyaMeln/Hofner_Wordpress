@@ -3,6 +3,53 @@
 //if (defined('JETPACK__VERSION')){
 //    require get_template_directory() . '/inc/jetpack.php';
 //}
+
+if (function_exists('acf_add_options_page')){
+
+    acf_add_options_page();
+    acf_add_options_sub_page('Header');
+    acf_add_options_sub_page('Footer');
+
+    acf_add_options_page(array(
+        'page_title' => 'Налаштування теми',
+        'menu_title' => 'Налаштування теми',
+        'menu_slug' => 'theme-options',
+        'capability' => 'edit_posts',
+        'parent_slug' => '',
+        'position' => false,
+        'icon_url' => false,
+        'redirect' => false
+    ));
+    acf_add_options_sub_page(array(
+        'page_title' => 'Налаштування Header',
+        'menu_title' => 'Header',
+        'menu_slug' => 'theme-options-header',
+        'capability' => 'edit_posts',
+        'parent_slug' => 'theme-options',
+        'position' => false,
+        'icon_url' => false,
+    ));
+    acf_add_options_sub_page(array(
+        'page_title' => 'Налаштування Footer',
+        'menu_title' => 'Footer',
+        'menu_slug' => 'theme-options-footer',
+        'capability' => 'edit_posts',
+        'parent_slug' => 'theme-options',
+        'position' => false,
+        'icon_url' => false
+    ));
+    acf_add_options_sub_page(array(
+        'page_title' => 'Налаштування публікацій',
+        'menu_title' => 'Налаштування публікацій',
+        'menu_slug' => 'post-settings',
+        'capability' => 'edit_posts',
+        'parent_slug' => 'edit.php',
+        'position' => false,
+        'icon_url' => false
+    ));
+
+}
+
 add_action('wp_enqueue_scripts', function () {
     wp_enqueue_style('fonts-googleapis', 'https://fonts.googleapis.com');
     wp_enqueue_style('fonts-gstatic', 'https://fonts.gstatic.com');
@@ -316,7 +363,7 @@ function formSend()
     if ($email === '') {
         $json['error']['email']['status'] = true;
         $json['error']['email']['text'] = 'Обов\'язкове поле';
-    } elseif ( !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    } else if ( filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $json['error']['email']['status'] = true;
         $json['error']['email']['text'] = 'Не вірний формат email';
     }
